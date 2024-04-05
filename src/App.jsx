@@ -7,6 +7,7 @@ import GoogleTools from "./GoogleTools/GoogleTools";
 import ManageMeeting from "./ManageMeeting/ManageMeeting";
 import DigitalSyllabus from "./DigitalSyllabus/DigitalSyllabus";
 import DigitalPortfolio from "./DigitalPortfolio/DigitalPortfolio";
+import GoogleSlides from "./GoogleSlides/GoogleSlides";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route path="/ManageMeeting" element={<ManageMeeting />} />
           <Route path="/DigitalSyllabus" element={<DigitalSyllabus />} />
           <Route path="/DigitalPortfolio" element={<DigitalPortfolio />} />
-          {/* <Route path="/GoogleMeet" element={<GoogleMeet />} /> */}
+          <Route path="/GoogleSlides" element={<GoogleSlides />} />
           {/* <Route path="/GoogleCalender" element={<GoogleCalender />} /> */}
           {/* <Route path="/GoogleTasks" element={<GoogleTasks />} /> */}
           {/* <Route path="/GoogleClassRoom" element={<GoogleClassRoom />} /> */}
