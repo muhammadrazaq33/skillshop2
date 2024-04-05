@@ -1,6 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import Model from "../Components/Model";
+
+const citizens = [
+  {
+    id: 1,
+    img: "./assets/portfolio4.png",
+    text: "Open transcript",
+  },
+  {
+    id: 2,
+    img: "./assets/portfolio5.png",
+    text: "Open transcript",
+  },
+  {
+    id: 3,
+    img: "./assets/portfolio6.png",
+    text: "Open transcript",
+  },
+  {
+    id: 4,
+    img: "./assets/portfolio7.png",
+    text: "Open transcript",
+  },
+];
 
 const DigitalPortfolioSection = () => {
+  const [showModel, setShowModel] = useState(false);
+
   return (
     <div>
       {/* first section */}
@@ -183,6 +209,235 @@ const DigitalPortfolioSection = () => {
         </div>
       </div>
       {/*end oF  2 seCTION */}
+
+      {/* third section */}
+      {/* Explore ideas from other educators */}
+      <div className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA] shadow-top-bottom-inner">
+        <div className="max-w-[960px] w-[92vw] m-auto">
+          <div className="flex flex-col gap-5">
+            <h1 className="text1">Explore ideas from other educators</h1>
+            <p className="paragraph">
+              Listen to the following teachers talk about why they started using
+              electronic portfolios, and what Google tools they use to
+              accomplish this.
+            </p>
+          </div>
+          {/* cards ========> */}
+          <div className="mt-16 flex flex-col gap-6">
+            <p className="Bold">
+              Click play to listen to each teacher. You can also open each
+              transcript to read at your own pace.
+            </p>
+
+            <div className="grid sm:grid-cols-2 grid-cols-1 md:gap-x-[6rem] sm:gap-x-[3rem] gap-x-[2rem] gap-y-[2rem]  p-3">
+              {citizens.map((citizen) => {
+                const { id, img, text } = citizen;
+                return (
+                  <article
+                    key={id}
+                    className="flex flex-col items-center gap-4"
+                  >
+                    <img src={img} alt="" />
+                    <button
+                      onClick={() => setShowModel(id)}
+                      className="bg-[#1A73E8] py-2.5 text-white w-full font-bold"
+                    >
+                      {text}
+                    </button>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        {/* Model */}
+        {showModel && (
+          <Model
+            setShowModel={setShowModel}
+            showModel={showModel}
+            closeModel={() => setShowModel(false)}
+          />
+        )}
+      </div>
+      {/* end of third section */}
+
+      {/* 4 seCTION */}
+      {/* Housing student work
+       */}
+      <div className="sm:pt-20 pt-12 sm:pb-16 pb-12">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
+          <div className="flex flex-col gap-6">
+            <h1 className="text1 leading-[2.4rem]">Housing student work</h1>
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-10">
+              <article>
+                <img src="./assets/portfolio8.png" alt="" />
+              </article>
+              <article className="flex flex-col gap-4">
+                <p className="paragraph">
+                  We have reviewed some of the benefits of using electronic
+                  portfolios with your students.{" "}
+                </p>
+                <p className="paragraph">
+                  The most ideal way to house and organize student portfolios is
+                  using both Drive and Sites. You can have students put all
+                  their digital work in Drive and then display it on a site.
+                  They can easily{" "}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://support.google.com/sites/answer/6372879"
+                    className="text-[blue] underline"
+                  >
+                    insert Google Docs, Sheets, Slides
+                  </a>
+                  , or even a whole folder in a site. These folders may contain
+                  other non-Google documents, such as images, PDFs and videos.
+                </p>
+                <p className="paragraph">
+                  Let’s now take a look at the different methods we can use to
+                  house digital work with Google tools.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*end oF  4 seCTION */}
+
+      <div className="bg-[url('/assets/portfolio9.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
+
+      {/* slider */}
+      <div className="grid place-content-center h-[25rem] bg-[#F9F9FA]">
+        <h1 className="text-[4rem]">Slider</h1>
+      </div>
+      {/*end of slider */}
+
+      <div className="bg-[url('/assets/portfolio10.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
+
+      {/* slider */}
+      <div className="grid place-content-center h-[25rem]">
+        <h1 className="text-[4rem]">Slider</h1>
+      </div>
+      {/*end of slider */}
+
+      <div className="bg-[url('/assets/portfolio11.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
+
+      {/* 5 seCTION */}
+      {/* Take it to work: Design your Portfolio Site
+       */}
+      <div className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA]">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
+          {/* first div */}
+          <div className="flex flex-col gap-6">
+            <h1 className="text">
+              Take it to work: Design your Portfolio Site
+            </h1>
+            <p className="paragraph">
+              At this point, you have seen some of the benefits of having
+              digital student portfolios and a few ways to create them using
+              Google tools. It is now your turn to design a site that works for
+              your class. Think about the purpose(s) the site will serve, the
+              content you want your students to insert, and how it will be
+              organized.
+            </p>
+            <p className="paragraph">
+              Building a site takes a lot of planning. Consider the following
+              before you jump in:
+            </p>
+          </div>
+          {/* second div */}
+          <div className="flex flex-col gap-7 mt-8">
+            <p className="Bold">
+              Click the button 'Review considerations' to learn more.
+            </p>
+            {/* cards ======> */}
+            <div className="flex flex-wrap md:flex-row flex-col justify-center items-center gap-3">
+              <article className="grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4 max-w-[16rem] w-full">
+                <img
+                  src="./assets/portfolio12.png"
+                  className="w-12 h-12"
+                  alt=""
+                />
+              </article>
+              <article className="max-w-[16rem] w-full grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4">
+                <img
+                  src="./assets/portfolio13.png"
+                  className="w-12 h-12"
+                  alt=""
+                />
+              </article>
+            </div>
+            {/* button */}
+            <button className="bg-[#4285F4] text-white m-auto py-3 px-4 font-bold mt-1">
+              Review considerations
+            </button>
+          </div>
+          {/* third div */}
+          <div className="flex flex-col gap-6 mt-2">
+            <p className="paragraph">
+              Below you will find a link to a Doc that will guide you through
+              the process. In the document you will find further instructions on
+              creating your site.
+            </p>
+            <p className="paragraph">
+              After considering the above questions, open the Google Doc below
+              to get started!
+            </p>
+            {/* button */}
+            <div className="flex justify-start">
+              <button className="bg-[#4285F4] text-white py-3 px-4 font-bold mt-1">
+                <a
+                  href="https://docs.google.com/document/d/1z7TOzbfmdl0B0M8zs_o0qrY1URgcG_weklVasNv6vgo/copy"
+                  target="_blank"
+                  role="button"
+                >
+                  <span>
+                    <span>Click here to design your portfolio site ↗</span>
+                  </span>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*end oF  5 seCTION */}
+
+      <div className="bg-[url('/assets/portfolio15.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
+
+      {/* 6 sEctIOn */}
+      {/* Reflect on what you have learned */}
+      <div className="sm:pt-20 pt-16 pb-12">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col md:gap-12 gap-8">
+          <h1 className="text1 leading-[2.4rem]">
+            Reflect on what you have learned
+          </h1>
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-10">
+            {/* TEXt */}
+            <article className="flex flex-col gap-4 md:col-span-2">
+              <div className="flex flex-col gap-4 md:col-span-1">
+                <p className="font-bold">
+                  Consider the following and make a note of your answers.
+                </p>
+                <ol className="list-decimal pl-12 paragraph">
+                  <li>
+                    How can I support my students as they create a digital
+                    portfolio that showcases their learning and growth?
+                  </li>
+                  <li>
+                    {" "}
+                    In what ways can I share my students' digital portfolios
+                    with others?
+                  </li>
+                </ol>
+              </div>
+            </article>
+            <article className="md:mt-0 mt-3">
+              <img src="./assets/portfolio16.png" alt="" />
+            </article>
+          </div>
+        </div>
+      </div>
+      {/*END oF 6 sEctIOn */}
     </div>
   );
 };
