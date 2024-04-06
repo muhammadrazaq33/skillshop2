@@ -10,6 +10,7 @@ import DigitalPortfolio from "./DigitalPortfolio/DigitalPortfolio";
 import GoogleSlides from "./GoogleSlides/GoogleSlides";
 import GoogleMeet from "./GoogleMeet/GoogleMeet";
 import ShareOption from "./ShareOption/ShareOption";
+import VisualizeLearning from "./VisualizeLearning/VisualizeLearning";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           <Route path="/GoogleSlides" element={<GoogleSlides />} />
           <Route path="/GoogleMeet" element={<GoogleMeet />} />
           <Route path="/ShareOption" element={<ShareOption />} />
-          {/* <Route path="/GoogleClassRoom" element={<GoogleClassRoom />} /> */}
+          <Route path="/VisualizeLearning" element={<VisualizeLearning />} />
           {/* <Route path="/GoogleClassroom2" element={<GoogleClassroom2 />} /> */}
           {/* <Route path="/DigitalFeedback" element={<DigitalFeedback />} /> */}
           {/* <Route path="/GoogleForms" element={<GoogleForms />} /> */}
