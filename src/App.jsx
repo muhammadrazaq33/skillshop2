@@ -12,6 +12,7 @@ import GoogleMeet from "./GoogleMeet/GoogleMeet";
 import ShareOption from "./ShareOption/ShareOption";
 import VisualizeLearning from "./VisualizeLearning/VisualizeLearning";
 import PublishWork from "./PublishWork/PublishWork";
+import BestPractices from "./BestPractices/BestPractices";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           <Route path="/ShareOption" element={<ShareOption />} />
           <Route path="/VisualizeLearning" element={<VisualizeLearning />} />
           <Route path="/PublishWork" element={<PublishWork />} />
-          {/* <Route path="/DigitalFeedback" element={<DigitalFeedback />} /> */}
+          <Route path="/BestPractices" element={<BestPractices />} />
           {/* <Route path="/GoogleForms" element={<GoogleForms />} /> */}
           {/* <Route path="/StudentProgress" element={<StudentProgress />} /> */}
           {/* <Route path="/StudentGrowth" element={<StudentGrowth />} /> */}
