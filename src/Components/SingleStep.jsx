@@ -14,7 +14,7 @@ const SingleStep = ({ open, toggle1, title, info }) => {
         }`}
       >
         <button>{open ? <FaMinus /> : <FaPlus />}</button>
-        <p className="text-[18px]">{title}</p>
+        <p className="text-[18px] ">{title}</p>
       </article>
       <Collapse isOpened={open}>
         <article>

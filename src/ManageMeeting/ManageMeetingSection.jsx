@@ -173,17 +173,6 @@ const ManageMeetingSection = () => {
 
           <div className="flex flex-col gap-2 mt-2">
             <p className="Bold mb-4">Click play to watch the video below.</p>
-            {/* video */}
-            {/* <video
-            tabindex="-1"
-            class="video-stream html5-main-video"
-            webkit-playsinline=""
-            playsinline=""
-            controlslist="nodownload"
-            style="width: 905px; height: 509px; left: 0px; top: 0px;"
-            src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
-          ></video> */}
-
             <iframe
               //   width="800"
               //   height="600"
