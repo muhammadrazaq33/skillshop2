@@ -9,6 +9,7 @@ import DigitalSyllabus from "./DigitalSyllabus/DigitalSyllabus";
 import DigitalPortfolio from "./DigitalPortfolio/DigitalPortfolio";
 import GoogleSlides from "./GoogleSlides/GoogleSlides";
 import GoogleMeet from "./GoogleMeet/GoogleMeet";
+import ShareOption from "./ShareOption/ShareOption";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <Route path="/DigitalPortfolio" element={<DigitalPortfolio />} />
           <Route path="/GoogleSlides" element={<GoogleSlides />} />
           <Route path="/GoogleMeet" element={<GoogleMeet />} />
-          {/* <Route path="/GoogleTasks" element={<GoogleTasks />} /> */}
+          <Route path="/ShareOption" element={<ShareOption />} />
           {/* <Route path="/GoogleClassRoom" element={<GoogleClassRoom />} /> */}
           {/* <Route path="/GoogleClassroom2" element={<GoogleClassroom2 />} /> */}
           {/* <Route path="/DigitalFeedback" element={<DigitalFeedback />} /> */}
