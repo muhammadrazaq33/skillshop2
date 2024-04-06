@@ -302,7 +302,7 @@ const CourseContent = () => {
                         </li>
                         <li className="activitysection__item courselist__item">
                           <NavLink
-                            to={"./DigitalFeedback"}
+                            to="/PublishWork"
                             className="double_click_protection"
                           >
                             <div className="courselist__marker"></div>

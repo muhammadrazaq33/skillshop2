@@ -389,7 +389,7 @@ const VisualizeLearningSection = () => {
                 <button className="text-white bg-[#4285f4] rounded-[2px] py-[9px] px-[13px] font-medium text-[16px] shadow-md ml-2">
                   <a
                     href="https://docs.google.com/presentation/d/184cfCowyAkFBrMjrSEtDdVO9wSzVGI_6iRtZQOsP2Uw/edit#slide=id.g162cdc52302_0_77"
-                    class="ev-links-item-link ev-button"
+                    className="ev-links-item-link ev-button"
                     target="_blank"
                     role="button"
                   >
