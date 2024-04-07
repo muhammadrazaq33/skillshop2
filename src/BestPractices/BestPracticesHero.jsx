@@ -1,7 +1,66 @@
 import React from "react";
+import { FaRegStar } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
+import { NavLink } from "react-router-dom";
 
 const BestPracticesHero = () => {
-  return <div>BestPracticesHero</div>;
+  return (
+    <div>
+      <div>
+        {/* image */}
+        <img src="./assets/best1.png" className="w-full" alt="" />
+
+        <div className="sm:mt-[2.5rem] mt-[1.5rem] max-w-[680px] w-[92vw] m-auto ">
+          {/* header title */}
+          <div className=" flex flex-col gap-2.5 py-6 border-b border-gray-400">
+            <h1 className="Heading leading-[2.9rem]">
+              Teaching and learning best practice
+            </h1>
+            <div className="sm:flex items-center gap-7">
+              <div className="flex items-center gap-6">
+                <p className="text-[12px]">Published: Jun 13, 2023</p>
+                <p className="text-[12px]">5 m</p>
+              </div>
+              {/* review icon */}
+              <div className="flex items-center gap-2 sm:mt-0 mt-1">
+                <div className="flex items-center text-[12px] gap-1">
+                  <FaRegStar />
+                  <FaRegStar />
+                  <FaRegStar />
+                  <FaRegStar />
+                  <FaRegStar />
+                </div>
+                <p className="text-[12px]">(5)</p>
+              </div>
+            </div>
+          </div>
+          {/* end of header title  */}
+          {/* favorites */}
+          <div className="mt-3 flex flex-col gap-10">
+            <div className="flex items-center gap-2">
+              <CiHeart />
+              <NavLink>
+                <p>Favorites</p>
+              </NavLink>
+            </div>
+            <div className="flex flex-col gap-5">
+              <p className="text-[19px] text-[#393b3d]">
+                In this lesson, you will explore strategies for integrating
+                Google apps, build digital skills to support interactive,
+                personalized learning experiences, and create resources to
+                engage students in and beyond the classroom.
+              </p>
+              <p className="text-[19px] text-[#393b3d]">
+                But first, let’s explore some teaching and learning best
+                practices so that you can more effectively integrate Google
+                tools.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default BestPracticesHero;
