@@ -13,6 +13,7 @@ import ShareOption from "./ShareOption/ShareOption";
 import VisualizeLearning from "./VisualizeLearning/VisualizeLearning";
 import PublishWork from "./PublishWork/PublishWork";
 import BestPractices from "./BestPractices/BestPractices";
+import Assessment from "./Assessment/Assessment";
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
           <Route path="/VisualizeLearning" element={<VisualizeLearning />} />
           <Route path="/PublishWork" element={<PublishWork />} />
           <Route path="/BestPractices" element={<BestPractices />} />
-          {/* <Route path="/GoogleForms" element={<GoogleForms />} /> */}
+          <Route path="/Assessment" element={<Assessment />} />
           {/* <Route path="/StudentProgress" element={<StudentProgress />} /> */}
           {/* <Route path="/StudentGrowth" element={<StudentGrowth />} /> */}
         </Routes>
