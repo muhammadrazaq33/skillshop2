@@ -216,7 +216,7 @@ body {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border: 2px solid #dadce099;
+  border: 1px solid #3c4043;
   border-radius: 50%;
   outline: none;
   cursor: pointer;

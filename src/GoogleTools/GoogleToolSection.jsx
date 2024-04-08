@@ -24,7 +24,10 @@ const GoogleToolSection = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#startDrive" className="double_click_protection">
+                    <a
+                      href="#UseGoogleClassroom"
+                      className="double_click_protection"
+                    >
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -35,7 +38,7 @@ const GoogleToolSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#UploadMaterial"
+                      href="#TrackProgress"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -60,7 +63,7 @@ const GoogleToolSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Classroom
                 </h1>
               </div>
@@ -70,7 +73,7 @@ const GoogleToolSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Sheets
                 </h1>
               </div>
@@ -114,7 +117,10 @@ const GoogleToolSection = () => {
 
       {/* SECOND seCTION */}
       {/* Use Google Classroom to automate personalized updates */}
-      <div className="sm:pt-20 pt-12 pb-10 bg-[#F9F9FA]">
+      <div
+        id="UseGoogleClassroom"
+        className="sm:pt-20 pt-12 pb-10 bg-[#F9F9FA]"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col sm:gap-10 gap-8">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
@@ -277,7 +283,10 @@ const GoogleToolSection = () => {
 
       {/* 5 seCTION */}
       {/* Track student progress with Google Sheets */}
-      <div className="sm:pt-20 pt-12 pb-10 bg-[#F9F9FA] top-shadow">
+      <div
+        id="TrackProgress"
+        className="sm:pt-20 pt-12 pb-10 bg-[#F9F9FA] top-shadow"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col sm:gap-10 gap-8">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
@@ -312,15 +321,30 @@ const GoogleToolSection = () => {
           <div className="flex flex-col gap-3">
             <p className="paragraph">Before starting, make sure to:</p>
             <div className="grid sm:grid-cols-3 grid-cols-1 gap-4 px-2">
-              <article className="py-3.5 rounded-sm max-h-[10rem] px-3.5 bg-[#E8E8E8]">
+              <article
+                data-aos-delay="60"
+                data-aos-duration="1900"
+                data-aos="fade-up"
+                className="py-3.5 rounded-sm max-h-[10rem] px-3.5 bg-[#E8E8E8]"
+              >
                 <p className="paragraph">Create a new spreadsheet</p>
               </article>
-              <article className="py-3.5 rounded-sm max-h-[10rem] px-3.5 bg-[#E8E8E8]">
+              <article
+                data-aos-delay="65"
+                data-aos-duration="1900"
+                data-aos="fade-up"
+                className="py-3.5 rounded-sm max-h-[10rem] px-3.5 bg-[#E8E8E8]"
+              >
                 <p className="paragraph">
                   Add headers for the information you want to include
                 </p>
               </article>
-              <article className="py-3.5 rounded-sm max-h-[10rem] px-3.5 bg-[#E8E8E8]">
+              <article
+                data-aos-delay="70"
+                data-aos-duration="2000"
+                data-aos="fade-up"
+                className="py-3.5 rounded-sm max-h-[10rem] px-3.5 bg-[#E8E8E8]"
+              >
                 <p className="paragraph">Choose a student from your class</p>
               </article>
             </div>
@@ -487,9 +511,103 @@ const GoogleToolSection = () => {
 
       <div className="bg-[url('/assets/tool15.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
-      <div className="grid place-content-center h-[10rem] bg-[#F9F9FA]">
-        <p className="text-[4rem]">check box</p>
+      {/* 7 section */}
+      {/* Take it to work: Create a student progress tracker in Google Sheets */}
+      <div className="sm:pb-16 pb-12 md:pt-20 pt-12 bg-[#F9F9FA]">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
+          {/* first div */}
+          <div className="flex flex-col gap-5">
+            <h1 className="text">
+              Take it to work: Create a student progress tracker in Google
+              Sheets
+            </h1>
+            <p className="paragraph mt-1">
+              Now that you are familiar with the process of using Google Sheets
+              to filter information and add data validation and comments, you
+              are ready to practice these skills.
+            </p>
+            <p className="paragraph">
+              In this activity, you will use Google Sheets to track a student’s
+              progress in your class.
+            </p>
+          </div>
+
+          {/* second div */}
+          <div className="flex flex-col gap-5">
+            <p className="font-bold">Your spreadsheet might include:</p>
+            <div className="grid md:grid-cols-3 sm:grid-cols-2 gri gap-6 px-5">
+              {/* first div */}
+              <div className="flex flex-col gap-8">
+                <article className="flex items-start gap-6">
+                  <input
+                    type="checkbox"
+                    className="circular-checkbox flex-shrink-0"
+                    name=""
+                    id=""
+                  />
+                  <p className="paragraph">Student’s first and last name.</p>
+                </article>
+                <article className="flex items-start gap-6">
+                  <input
+                    type="checkbox"
+                    className="circular-checkbox flex-shrink-0"
+                    name=""
+                    id=""
+                  />
+                  <p className="paragraph">List of class subjects.</p>
+                </article>
+              </div>
+              <div className="flex flex-col gap-8">
+                <article className="flex items-start gap-6">
+                  <input
+                    type="checkbox"
+                    className="circular-checkbox flex-shrink-0"
+                    name=""
+                    id=""
+                  />
+                  <p className="paragraph">List of assignments.</p>
+                </article>
+                <article className="flex items-start gap-6">
+                  <input
+                    type="checkbox"
+                    className="circular-checkbox flex-shrink-0"
+                    name=""
+                    id=""
+                  />
+                  <p className="paragraph">Assignment due dates.</p>
+                </article>
+              </div>
+              <div className="flex flex-col gap-8">
+                <article className="flex items-start gap-6">
+                  <input
+                    type="checkbox"
+                    className="circular-checkbox flex-shrink-0"
+                    name=""
+                    id=""
+                  />
+                  <p className="paragraph">
+                    Notes if the assignment is assigned, missing, completed,
+                    submitted, or graded.
+                  </p>
+                </article>
+                <article className="flex items-start gap-6">
+                  <input
+                    type="checkbox"
+                    className="circular-checkbox flex-shrink-0"
+                    name=""
+                    id=""
+                  />
+                  <p className="paragraph">
+                    Priority indicator for missing assignments (1 = high / 5 =
+                    low).
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      {/*end of 7 section */}
     </div>
   );
 };
