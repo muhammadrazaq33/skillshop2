@@ -8,7 +8,6 @@ const Explore = () => {
     <div>
       <ExploreHero />
       <ExploreSection />
-      <ExploreFooter />
     </div>
   );
 };

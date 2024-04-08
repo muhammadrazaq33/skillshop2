@@ -115,9 +115,7 @@ const BoostSections = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[23px] max-w-[12rem] leading-[1.6rem] text-[#5f6368]">
-                  Gmail
-                </h1>
+                <h1 className="max-w-[12rem] leading-[1.6rem]">Gmail</h1>
               </div>
             </div>
             {/*end of right side */}

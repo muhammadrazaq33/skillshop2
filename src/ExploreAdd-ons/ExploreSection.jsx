@@ -24,7 +24,10 @@ const ExploreSection = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#startDrive" className="double_click_protection">
+                    <a
+                      href="#possibilities"
+                      className="double_click_protection"
+                    >
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -35,7 +38,7 @@ const ExploreSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#UploadMaterial"
+                      href="#ExploreOption"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -48,7 +51,7 @@ const ExploreSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#OrganizeItems"
+                      href="#StartedAdd-ons"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -73,7 +76,7 @@ const ExploreSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="max-w-[12rem] leading-[1.6rem] tools">
                   Google Marketplace
                 </h1>
               </div>
@@ -117,7 +120,7 @@ const ExploreSection = () => {
 
       {/* SECOND seCTION */}
       {/* The possibilities of Google Workspace for Education */}
-      <div className="sm:pt-20 pt-12 pb-10">
+      <div id="possibilities" className="sm:pt-20 pt-12 pb-10">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col sm:gap-10 gap-8">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
@@ -199,7 +202,7 @@ const ExploreSection = () => {
       {/* 3 sEctiON */}
       {/* Explore add-on options */}
       <div
-        id="ScheduleMeeting"
+        id="ExploreOption"
         className=" sm:pt-20 pt-16 pb-16 bg-[#F9F9FA] shadow-top-bottom-inner"
       >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-5">
@@ -284,7 +287,7 @@ const ExploreSection = () => {
 
       {/* 4 SectION */}
       {/* Get started with add-ons */}
-      <div className="sm:pt-20 pt-12">
+      <div id="StartedAdd-ons" className="sm:pt-20 pt-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col sm:gap-12 gap-10">
           <div className="flex flex-col gap-5">
             <h1 className="text1 leading-[2.4rem]">Get started with add-ons</h1>
@@ -406,6 +409,12 @@ const ExploreSection = () => {
       {/*EnD of 4 SectION */}
 
       <div className="bg-[url('/assets/explore9.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
+
+      {/* slider */}
+      <div className="h-[50vh] grid place-items-center bg-[#F9F9FA]">
+        <h1 className="text-[3rem]">Slider</h1>
+      </div>
+      {/* end of slider */}
     </div>
   );
 };
