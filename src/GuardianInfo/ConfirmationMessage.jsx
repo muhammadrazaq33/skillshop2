@@ -9,7 +9,7 @@ const ConfirmationMessage = () => {
     <div>
       {/* 6 section */}
       {/* Customize your confirmation message */}
-      <div className="sm:pb-16 pb-12 md:pt-20 pt-12">
+      <div id="ConfirmationMessage" className="sm:pb-16 pb-12 md:pt-20 pt-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
           {/* first div */}
           <div className="flex flex-col gap-5">
@@ -150,7 +150,7 @@ const ConfirmationMessage = () => {
       {/* 3 sEctiON */}
       {/* Access responses */}
       <div
-        id="ScheduleMeeting"
+        id="Responses"
         className=" sm:pt-20 pt-16 sm:pb-16 pb-12 bg-[#F9F9FA] top-shadow"
       >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
@@ -194,7 +194,7 @@ const ConfirmationMessage = () => {
 
       <div className="bg-[url('/assets/guardian16.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
-      {/* 2 sEctiON */}
+      {/* 4 sEctiON */}
       {/* Try it out */}
       <div
         id="ScheduleMeeting"
@@ -207,6 +207,9 @@ const ConfirmationMessage = () => {
           {/* slider */}
           <div className="mt-6">
             <p className="Bold">Click the arrow to learn more.</p>
+            <div className="grid place-items-center h-[20vh]">
+              <h1 className="text-[3rem]">Slider</h1>
+            </div>
           </div>
           {/*end of slider */}
 

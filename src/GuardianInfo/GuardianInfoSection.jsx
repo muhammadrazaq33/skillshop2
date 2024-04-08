@@ -29,7 +29,7 @@ const GuardianInfoSection = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#startDrive" className="double_click_protection">
+                    <a href="#UseForm" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -39,10 +39,7 @@ const GuardianInfoSection = () => {
                     </a>{" "}
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#UploadMaterial"
-                      className="double_click_protection"
-                    >
+                    <a href="#CollectInfo" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -52,10 +49,7 @@ const GuardianInfoSection = () => {
                     </a>
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#OrganizeItems"
-                      className="double_click_protection"
-                    >
+                    <a href="#SendForm" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -66,7 +60,7 @@ const GuardianInfoSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#OrganizeItems"
+                      href="#ConfirmationMessage"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -78,10 +72,7 @@ const GuardianInfoSection = () => {
                     </a>{" "}
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#OrganizeItems"
-                      className="double_click_protection"
-                    >
+                    <a href="#Responses" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -104,7 +95,7 @@ const GuardianInfoSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Forms
                 </h1>
               </div>
@@ -114,7 +105,7 @@ const GuardianInfoSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Sheets
                 </h1>
               </div>
@@ -158,7 +149,7 @@ const GuardianInfoSection = () => {
 
       {/* 2 sEctiON */}
       {/* Use Forms to improve communication */}
-      <div id="ScheduleMeeting" className=" sm:pt-20 pt-16 sm:pb-16 pb-12">
+      <div id="UseForm" className=" sm:pt-20 pt-16 sm:pb-16 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
           <h1 className="text1 leading-[2.4rem]">
             Use Forms to improve communication
@@ -217,7 +208,7 @@ const GuardianInfoSection = () => {
       {/* 3 sEctiON */}
       {/* Collect information based on the guardian's selection */}
       <div
-        id="ScheduleMeeting"
+        id="CollectInfo"
         className=" sm:pt-20 pt-16 sm:pb-16 pb-12 bg-[#F9F9FA] top-shadow"
       >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
@@ -401,7 +392,10 @@ const GuardianInfoSection = () => {
       <div className="bg-[url('/assets/guardian11.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
       {/* 5 section */}
-      <div className="bg-[#F9F9FA] shadow-inner-large sm:pb-16 pb-12 md:pt-20 pt-12">
+      <div
+        id="SendForm"
+        className="bg-[#F9F9FA] shadow-inner-large sm:pb-16 pb-12 md:pt-20 pt-12"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
           {/* first div */}
           <div className="flex flex-col gap-5">
@@ -539,7 +533,7 @@ const GuardianInfoSection = () => {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 grid-cols-1 gap-12">
+            <div className="grid sm:grid-cols-2 grid-cols-1 gap-x-12 gap-y-6">
               <article className="flex flex-col gap-4">
                 <p className="font-bold text-center">Publish the link</p>
                 <p className="paragraph">
