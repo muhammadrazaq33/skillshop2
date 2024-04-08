@@ -14,6 +14,7 @@ import VisualizeLearning from "./VisualizeLearning/VisualizeLearning";
 import PublishWork from "./PublishWork/PublishWork";
 import BestPractices from "./BestPractices/BestPractices";
 import Assessment from "./Assessment/Assessment";
+import GoogleSheets from "./GoogleSheets/GoogleSheets";
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
           <Route path="/PublishWork" element={<PublishWork />} />
           <Route path="/BestPractices" element={<BestPractices />} />
           <Route path="/Assessment" element={<Assessment />} />
-          {/* <Route path="/StudentProgress" element={<StudentProgress />} /> */}
+          <Route path="/GoogleSheets" element={<GoogleSheets />} />
           {/* <Route path="/StudentGrowth" element={<StudentGrowth />} /> */}
         </Routes>
         {/* <Footer /> */}

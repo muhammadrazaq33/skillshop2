@@ -3,18 +3,18 @@ import { FaRegStar } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
 
-const BoostHero = () => {
+const GoogleSheetsHero = () => {
   return (
     <div>
       <div>
         {/* image */}
-        <img src="./assets/Boost_hero.png" className="w-full" alt="" />
+        <img src="./assets/sheet1.png" className="w-full" alt="" />
 
         <div className="sm:mt-[2.5rem] mt-[1.5rem] max-w-[680px] w-[92vw] m-auto ">
           {/* header title */}
           <div className=" flex flex-col gap-2.5 py-6 border-b border-gray-400">
             <h1 className="Heading leading-[2.9rem]">
-              Boost your efficiency in Gmail
+              Visualize student results with Google Sheets
             </h1>
             <div className="sm:flex items-center gap-7">
               <div className="flex items-center gap-6">
@@ -30,7 +30,7 @@ const BoostHero = () => {
                   <FaRegStar />
                   <FaRegStar />
                 </div>
-                <p className="text-[12px]">(7)</p>
+                <p className="text-[12px]">(4)</p>
               </div>
             </div>
           </div>
@@ -44,10 +44,8 @@ const BoostHero = () => {
               </NavLink>
             </div>
             <p className="text-[19px] text-[#393b3d]">
-              In this lesson, you will learn to customize your email experience
-              with time-saving features in Gmail. You’ll also create an email
-              template to help you communicate important information quickly and
-              efficiently.
+              Create easily identifiable data that stands out with your Google
+              Sheets.
             </p>
           </div>
         </div>
@@ -56,4 +54,4 @@ const BoostHero = () => {
   );
 };
 
-export default BoostHero;
+export default GoogleSheetsHero;

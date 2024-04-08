@@ -378,7 +378,7 @@ const CourseContent = () => {
                         </li>
                         <li className="activitysection__item courselist__item">
                           <NavLink
-                            to={"./StudentProgress"}
+                            to="/GoogleSheets"
                             className="double_click_protection"
                           >
                             <div className="courselist__marker"></div>
