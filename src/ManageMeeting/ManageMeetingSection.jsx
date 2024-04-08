@@ -31,7 +31,7 @@ const ManageMeetingSection = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#startDrive" className="double_click_protection">
+                    <a href="#Schedule" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -41,10 +41,7 @@ const ManageMeetingSection = () => {
                     </a>{" "}
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#UploadMaterial"
-                      className="double_click_protection"
-                    >
+                    <a href="#Host" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -54,10 +51,7 @@ const ManageMeetingSection = () => {
                     </a>
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#UploadMaterial"
-                      className="double_click_protection"
-                    >
+                    <a href="#StudentInput" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -80,7 +74,7 @@ const ManageMeetingSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Meet
                 </h1>
               </div>
@@ -90,7 +84,7 @@ const ManageMeetingSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Calendar
                 </h1>
               </div>
@@ -100,7 +94,7 @@ const ManageMeetingSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Slides
                 </h1>
               </div>
@@ -144,7 +138,7 @@ const ManageMeetingSection = () => {
 
       {/* 2 seCTION */}
       {/* Schedule and meet with guardians */}
-      <div className="sm:pt-20 pt-12 pb-10">
+      <div id="Schedule" className="sm:pt-20 pt-12 pb-10">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col sm:gap-10 gap-8">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
@@ -290,7 +284,7 @@ const ManageMeetingSection = () => {
 
       {/* 4 seCTION */}
       {/* Host a virtual sync */}
-      <div className="sm:pt-20 pt-12 pb-10">
+      <div id="Host" className="sm:pt-20 pt-12 pb-10">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col sm:gap-10 gap-8">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">Host a virtual sync</h1>
@@ -455,7 +449,10 @@ const ManageMeetingSection = () => {
 
       {/* 6 seCTION */}
       {/* Bring student input to guardian meetings */}
-      <div className="sm:pt-20 pt-12 pb-10 bg-[#F9F9FA] top-shadow">
+      <div
+        id="StudentInput"
+        className="sm:pt-20 pt-12 pb-10 bg-[#F9F9FA] top-shadow"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col sm:gap-10 gap-8">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
