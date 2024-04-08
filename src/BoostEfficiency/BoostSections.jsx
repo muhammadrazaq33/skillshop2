@@ -33,7 +33,7 @@ const BoostSections = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#StartMeeting" className="double_click_protection">
+                    <a href="#SaveTime" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -44,7 +44,7 @@ const BoostSections = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#ScheduleMeeting"
+                      href="#AdvanceFeature"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -56,7 +56,7 @@ const BoostSections = () => {
                     </a>
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a href="#ShareScreen" className="double_click_protection">
+                    <a href="#AutoAdvance" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -66,7 +66,7 @@ const BoostSections = () => {
                     </a>{" "}
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a href="#RaiseHand" className="double_click_protection">
+                    <a href="#Templates" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -77,7 +77,7 @@ const BoostSections = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#TrackAttendance"
+                      href="#Customkeyboard"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -90,7 +90,7 @@ const BoostSections = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#TrackAttendance"
+                      href="#Unreadmessage"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -148,7 +148,7 @@ const BoostSections = () => {
 
       {/* second SeCtiON */}
       {/* Save time with advanced Gmail features */}
-      <div className="sm:pb-16 pb-12 md:pt-20 pt-12">
+      <div id="SaveTime" className="sm:pb-16 pb-12 md:pt-20 pt-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
           <div className="flex flex-col gap-5">
             <h1 className="text1 leading-[2.4rem]">
@@ -265,7 +265,7 @@ const BoostSections = () => {
       {/* 3 sEctiON */}
       {/* Enable advanced features */}
       <div
-        id="ScheduleMeeting"
+        id="AdvanceFeature"
         className=" sm:pt-20 pt-16 pb-16 bg-[#F9F9FA] top-shadow"
       >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-5">
@@ -334,7 +334,7 @@ const BoostSections = () => {
       {/* 5 sEctiON */}
       {/* Auto-advance */}
       <div
-        id="ScheduleMeeting"
+        id="AutoAdvance"
         className=" sm:pt-20 pt-16 pb-16 shadow-top-bottom-inner bg-[#F9F9FA]"
       >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-12">
@@ -359,7 +359,7 @@ const BoostSections = () => {
 
       {/* 6 sEctiON */}
       {/* Templates */}
-      <div id="ScheduleMeeting" className=" sm:pt-20 pt-16 md:pb-16 pb-12">
+      <div id="Templates" className=" sm:pt-20 pt-16 md:pb-16 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-12">
           <div className="flex flex-col gap-5">
             <h1 className="text1 leading-[2.4rem] mb-2">Templates</h1>
@@ -392,7 +392,7 @@ const BoostSections = () => {
       {/* 7 sEctiON */}
       {/* Custom keyboard shortcuts */}
       <div
-        id="ScheduleMeeting"
+        id="Customkeyboard"
         className=" sm:pt-20 pt-16 pb-16 shadow-top-bottom-inner bg-[#F9F9FA]"
       >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-12">
@@ -447,7 +447,7 @@ const BoostSections = () => {
 
       {/* 8 sEctiON */}
       {/* Unread message icon */}
-      <div id="ScheduleMeeting" className=" sm:pt-20 pt-16 md:pb-16 pb-12">
+      <div id="Unreadmessage" className=" sm:pt-20 pt-16 md:pb-16 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-12">
           <div className="flex flex-col gap-5">
             <h1 className="text1 leading-[2.4rem] mb-2">Unread message icon</h1>
