@@ -30,7 +30,10 @@ const DigitalSyllabusSection = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#startDrive" className="double_click_protection">
+                    <a
+                      href="#DigitalSyllabus"
+                      className="double_click_protection"
+                    >
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -40,10 +43,7 @@ const DigitalSyllabusSection = () => {
                     </a>{" "}
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#UploadMaterial"
-                      className="double_click_protection"
-                    >
+                    <a href="#Collaborate" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -54,7 +54,7 @@ const DigitalSyllabusSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#OrganizeItems"
+                      href="#TransformSyllabus"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -66,10 +66,7 @@ const DigitalSyllabusSection = () => {
                     </a>{" "}
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#OrganizeItems"
-                      className="double_click_protection"
-                    >
+                    <a href="#Redesign" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -92,7 +89,7 @@ const DigitalSyllabusSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Docs
                 </h1>
               </div>
@@ -102,7 +99,7 @@ const DigitalSyllabusSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Drive
                 </h1>
               </div>
@@ -135,7 +132,7 @@ const DigitalSyllabusSection = () => {
       {/* 2 seCTION */}
       {/* The power of a digital syllabus
        */}
-      <div className="sm:pt-20 pt-12 pb-10">
+      <div id="DigitalSyllabus" className="sm:pt-20 pt-12 pb-10">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
@@ -173,7 +170,10 @@ const DigitalSyllabusSection = () => {
       {/* 3 seCTION */}
       {/* Collaborate on your syllabus
        */}
-      <div className="sm:pt-20 pt-12 pb-10 bg-[#F9F9FA] top-shadow">
+      <div
+        id="Collaborate"
+        className="sm:pt-20 pt-12 pb-10 bg-[#F9F9FA] top-shadow"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
@@ -379,7 +379,10 @@ const DigitalSyllabusSection = () => {
       {/* 4 seCTION */}
       {/* Transform your syllabus
        */}
-      <div className="sm:pt-32 pt-16 pb-10 bg-[#F9F9FA] top-shadow">
+      <div
+        id="TransformSyllabus"
+        className="sm:pt-32 pt-16 pb-10 bg-[#F9F9FA] top-shadow"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">Transform your syllabus</h1>
@@ -577,7 +580,7 @@ const DigitalSyllabusSection = () => {
 
       {/* 6 section */}
       {/* Take it to work: Redesign a digital syllabus */}
-      <div className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA]">
+      <div id="Redesign" className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA]">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col  sm:gap-16 gap-10">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-6">
