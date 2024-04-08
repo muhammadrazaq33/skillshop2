@@ -91,7 +91,7 @@ const GoogleToolSection = () => {
               className="bg-[#E6E7E9] grid place-items-center py-4 rounded-lg gap-y-5 px-4 max-w-[20rem]"
             >
               <img src="./assets/tool3.png" alt="" />
-              <p className="text-center">
+              <p className="text-center paragraph">
                 Summarize student information in Google Classroom
               </p>
             </article>
@@ -103,7 +103,7 @@ const GoogleToolSection = () => {
               className="bg-[#E6E7E9] max-w-[20rem] grid place-items-center py-4 rounded-lg gap-y-5 px-4"
             >
               <img src="./assets/tool4.png" alt="" />
-              <p className="text-center">
+              <p className="text-center paragraph">
                 Track student progress using Google Sheets
               </p>
             </article>
