@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { SlBadge } from "react-icons/sl";
 
 const DigitalSyllabusSection = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0); // State to track active paragraph index
 
   const handleClick = (index) => {
     setActiveIndex(index);
   };
 
-  const toggle = () => {
-    if (show) {
-      setShow(false);
+  const toggle = (id) => {
+    if (id === show) {
+      setShow(null);
     } else {
-      setShow(true);
+      setShow(id);
     }
   };
   return (
@@ -433,20 +433,7 @@ const DigitalSyllabusSection = () => {
                 <p className="Bold mb-4">
                   Click play to watch the video below.
                 </p>
-                {/* video */}
-                {/* <video
-            tabindex="-1"
-            class="video-stream html5-main-video"
-            webkit-playsinline=""
-            playsinline=""
-            controlslist="nodownload"
-            style="width: 905px; height: 509px; left: 0px; top: 0px;"
-            src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
-          ></video> */}
-
                 <iframe
-                  //   width="800"
-                  //   height="600"
                   src="https://www.youtube.com/embed/7EHnQ0VM4KY?si=LtrXq2i2uzzHChqw"
                   title="YouTube video player"
                   frameborder="0"
@@ -454,36 +441,82 @@ const DigitalSyllabusSection = () => {
                   allowfullscreen
                   className="max-w-[905px] min-h-[310px] "
                 ></iframe>
-
                 {/* button  */}
                 <button
-                  onClick={toggle}
+                  onClick={() => toggle(1)}
                   className="w-full bg-[#1A73E8] py-2.5 text-white"
                 >
                   Transcript
                 </button>
               </div>
+              {/* usestate */}
+              <div className={`${show === 1 ? "block" : "hidden"}`}>
+                <div className="flex flex-col gap-5">
+                  <p className="paragraph">
+                    In this video we will create a table of contents for our
+                    syllabus.{" "}
+                  </p>
+                  <p className="paragraph">
+                    If your syllabus is longer than a page or two, a table of
+                    contents can help your students find what they need quickly
+                    and easily.
+                  </p>
+                  <p className="paragraph">
+                    When you have a table of contents, you can click directly on
+                    the category or the title and be taken to that section of
+                    the syllabus.
+                  </p>
+                  <p className="paragraph">
+                    Before you insert a table of contents, it is important to
+                    make sure that your headings and subheadings are formatted
+                    correctly.
+                  </p>
+                  <div>
+                    <p className="paragraph">In order to do that: </p>
+                    <ol className="list-decimal pl-10 paragraph">
+                      <li>
+                        Highlight or double click on a subtitle or a title and
+                        then click the <strong>Style</strong> dropdown in the
+                        Tools section here.
+                      </li>
+                      <li>
+                        From here you can select an appropriate title or heading
+                        style.
+                      </li>
+                      <li>
+                        When you have formatted all the titles and subtitles in
+                        your syllabus, you can then add your table of contents.{" "}
+                      </li>
+                      <li>
+                        From the Page menu here click Insert and then select
+                        <strong> Table of contents</strong>.
+                      </li>
+                      <li>
+                        You will then be given the option to choose the style of
+                        your contents table.
+                      </li>
+                      <li>
+                        Once you have selected the style your contents table is
+                        automatically created.
+                      </li>
+                      <li>
+                        You can refresh your table and keep it up to date with
+                        content changes simply by clicking the{" "}
+                        <strong>Refresh</strong> icon next to your table like
+                        this.
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
             </article>
             <article className="flex flex-col gap-4">
-              {" "}
+              <p className="paragraph">Organize information in a table.</p>
               <div className="flex flex-col gap-2 mt-2">
                 <p className="Bold mb-4">
                   Click play to watch the video below.
                 </p>
-                {/* video */}
-                {/* <video
-            tabindex="-1"
-            class="video-stream html5-main-video"
-            webkit-playsinline=""
-            playsinline=""
-            controlslist="nodownload"
-            style="width: 905px; height: 509px; left: 0px; top: 0px;"
-            src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
-          ></video> */}
-
                 <iframe
-                  //   width="800"
-                  //   height="600"
                   src="https://www.youtube.com/embed/7EHnQ0VM4KY?si=LtrXq2i2uzzHChqw"
                   title="YouTube video player"
                   frameborder="0"
@@ -494,29 +527,74 @@ const DigitalSyllabusSection = () => {
 
                 {/* button  */}
                 <button
-                  onClick={toggle}
+                  onClick={() => toggle(2)}
                   className="w-full bg-[#1A73E8] py-2.5 text-white"
                 >
                   Transcript
                 </button>
               </div>
+              {/* usestate */}
+              <div className={`${show === 2 ? "block" : "hidden"}`}>
+                <div className="flex flex-col gap-5">
+                  <p className="paragraph">
+                    In this video we will organize information in a table.{" "}
+                  </p>
+                  <p className="paragraph">
+                    Tables can provide structure to your syllabus and emphasize
+                    key sections. For example, you could use a table to show
+                    grading scale information.{" "}
+                  </p>
+                  <div>
+                    <p className="paragraph">To add a table:</p>
+                    <ol className="list-decimal pl-10 paragraph">
+                      <li>
+                        Navigate to the Page menu and choose{" "}
+                        <strong>Insert</strong> then <strong>Table</strong>.
+                      </li>
+                      <li>
+                        You can then choose the number of rows and columns that
+                        you need.
+                      </li>
+                      <li>
+                        So in this case, I'm going to do two rows and six
+                        columns.
+                      </li>
+                      <li>
+                        You can change your tables, style or appearance by
+                        selecting <strong>Format</strong> in the Page menu.{" "}
+                      </li>
+                      <li>
+                        Click <strong>Format, Table</strong> and{" "}
+                        <strong>Table properties</strong> to adjust to cell
+                        dimensions, realign text or add color.
+                      </li>
+                      <li>
+                        To merge cells, highlight the cells you would like to
+                        merge.{" "}
+                      </li>
+                      <li>
+                        Next click <strong>Format</strong> in the Page menu
+                      </li>
+                      <li>
+                        Select <strong>Table</strong>, then{" "}
+                        <strong>Merge cells</strong>.{" "}
+                      </li>
+                    </ol>
+                  </div>
+                  <p className="paragraph mt-3">
+                    And there we have a nicely formatted table.
+                  </p>
+                </div>
+              </div>
             </article>
             <article className="flex flex-col gap-4">
+              <p className="paragraph">
+                Integrate information into our syllabus with smart chips.
+              </p>
               <div className="flex flex-col gap-2 mt-2">
                 <p className="Bold mb-4">
                   Click play to watch the video below.
                 </p>
-                {/* video */}
-                {/* <video
-            tabindex="-1"
-            class="video-stream html5-main-video"
-            webkit-playsinline=""
-            playsinline=""
-            controlslist="nodownload"
-            style="width: 905px; height: 509px; left: 0px; top: 0px;"
-            src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
-          ></video> */}
-
                 <iframe
                   //   width="800"
                   //   height="600"
@@ -530,32 +608,63 @@ const DigitalSyllabusSection = () => {
 
                 {/* button  */}
                 <button
-                  onClick={toggle}
+                  onClick={() => toggle(3)}
                   className="w-full bg-[#1A73E8] py-2.5 text-white"
                 >
                   Transcript
                 </button>
               </div>
+              {/* usestate */}
+              <div className={`${show === 3 ? "block" : "hidden"}`}>
+                <div className="flex flex-col gap-5">
+                  <p className="paragraph">
+                    In this video we will learn how to integrate information
+                    into our syllabus with smart chips.
+                  </p>
+                  <p className="paragraph">
+                    Smart chips are tags that you can embed directly into a
+                    document.{" "}
+                  </p>
+                  <p className="paragraph">
+                    You can add smart chips for people, files, calendar events
+                    and more. They are similar to hyperlinks, but provide more
+                    detailed information when you hover over them.{" "}
+                  </p>
+                  <p className="paragraph">
+                    For example, when you add a People Chip and you hover over
+                    it, it provides more information on that contact, providing
+                    their email address and links to Email, Chat or Meet.
+                  </p>
+                  <p className="paragraph">
+                    In addition to tagging people. You can also use smart chips
+                    to embed documents, assignments, presentations and meeting
+                    links.{" "}
+                  </p>
+                  <div>
+                    <p className="paragraph">To insert a smart chip: </p>
+                    <ol className="list-decimal pl-10 paragraph">
+                      <li>Type the @ symbol.</li>
+                      <li>
+                        A Search menu will then appear as well as a list of
+                        Smart chips options and Building blocks.
+                      </li>
+                      <li>Click on any to insert.</li>
+                    </ol>
+                  </div>
+                  <p className="paragraph mt-3">
+                    You can also add things like checklists, media, dates, and
+                    more.
+                  </p>
+                </div>
+              </div>
             </article>
             <article className="flex flex-col gap-4">
+              <p className="paragraph">Add and customize images</p>
               <div className="flex flex-col gap-2 mt-2">
                 <p className="Bold mb-4">
                   Click play to watch the video below.
                 </p>
-                {/* video */}
-                {/* <video
-            tabindex="-1"
-            class="video-stream html5-main-video"
-            webkit-playsinline=""
-            playsinline=""
-            controlslist="nodownload"
-            style="width: 905px; height: 509px; left: 0px; top: 0px;"
-            src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
-          ></video> */}
-
                 <iframe
-                  //   width="800"
-                  //   height="600"
                   src="https://www.youtube.com/embed/7EHnQ0VM4KY?si=LtrXq2i2uzzHChqw"
                   title="YouTube video player"
                   frameborder="0"
@@ -566,17 +675,79 @@ const DigitalSyllabusSection = () => {
 
                 {/* button  */}
                 <button
-                  onClick={toggle}
+                  onClick={() => toggle(4)}
                   className="w-full bg-[#1A73E8] py-2.5 text-white"
                 >
                   Transcript
                 </button>
+              </div>
+              {/* usestate */}
+              <div className={`${show === 4 ? "block" : "hidden"}`}>
+                <div className="flex flex-col gap-5">
+                  <p className="paragraph">
+                    In this video we will customize an image that we've added to
+                    our course syllabus.{" "}
+                  </p>
+                  <p className="paragraph">
+                    So once you've inserted an image, you can select it to bring
+                    up the formatting options.
+                  </p>
+                  <div className="flex flex-col gap-5">
+                    <p className="paragraph">First let's crop the image. </p>
+                    <ol className="list-decimal pl-10 paragraph">
+                      <li>
+                        To crop an image, select the <strong>Crop</strong> icon
+                        in the toolbar here.{" "}
+                      </li>
+                      <li>
+                        You'll need to make sure your image is selected for this
+                        option to appear.{" "}
+                      </li>
+                      <li>
+                        Once the <strong>Crop</strong> icon is selected, you can
+                        then drag the rectangles at the edges of the image
+                        border to where you would like to crop your photo.
+                      </li>
+                      <li>
+                        Once done, hit the <strong>enter</strong> key on your
+                        keyboard.{" "}
+                      </li>
+                      <li>
+                        Another option you’ll see in the toolbar when an image
+                        is selected is the <strong>Image option</strong> button.{" "}
+                      </li>
+                      <li>
+                        Click the <strong>Image option</strong> button to see
+                        more formatting options in a menu.
+                      </li>
+                      <li>
+                        From this menu you can make changes to the image such as
+                        size, rotation, text wrapping, position, color and more.{" "}
+                      </li>
+                      <li>
+                        Click through the menu to choose how this image is
+                        displayed.
+                      </li>
+                      <li>You can click and drag it and resize. </li>
+                      <li>You can make it slightly transparent if needed, </li>
+                      <li>
+                        And you can also use the quick layout button to choose a
+                        location for your photo.
+                      </li>
+                    </ol>
+                  </div>
+                  <p className="paragraph mt-3">
+                    And now the image is customized in our syllabus.
+                  </p>
+                </div>
               </div>
             </article>
           </div>
         </div>
       </div>
       {/*end of 5 section */}
+
+      <div className="bg-[url('/assets/syllabus18.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
       {/* 6 section */}
       {/* Take it to work: Redesign a digital syllabus */}

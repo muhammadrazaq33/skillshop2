@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Model from "../Components/Model";
+import { FaRegCheckCircle } from "react-icons/fa";
 
 const citizens = [
   {
@@ -26,6 +27,7 @@ const citizens = [
 
 const DigitalPortfolioSection = () => {
   const [showModel, setShowModel] = useState(false);
+  const [review, setReview] = useState(false);
 
   return (
     <div>
@@ -41,7 +43,10 @@ const DigitalPortfolioSection = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#startDrive" className="double_click_protection">
+                    <a
+                      href="#electronicportfolio"
+                      className="double_click_protection"
+                    >
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -51,10 +56,7 @@ const DigitalPortfolioSection = () => {
                     </a>{" "}
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#UploadMaterial"
-                      className="double_click_protection"
-                    >
+                    <a href="#ExploreIdeas" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -65,7 +67,7 @@ const DigitalPortfolioSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#OrganizeItems"
+                      href="#Housingstudent"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -78,7 +80,7 @@ const DigitalPortfolioSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#OrganizeItems"
+                      href="#DesignPortfolio"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -103,7 +105,7 @@ const DigitalPortfolioSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Sites
                 </h1>
               </div>
@@ -113,7 +115,7 @@ const DigitalPortfolioSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Meet
                 </h1>
               </div>
@@ -158,7 +160,7 @@ const DigitalPortfolioSection = () => {
       {/* 2 seCTION */}
       {/* The power of an electronic portfolio
        */}
-      <div className="sm:pt-20 pt-12 pb-10">
+      <div id="electronicportfolio" className="sm:pt-20 pt-12 pb-10">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
@@ -212,7 +214,10 @@ const DigitalPortfolioSection = () => {
 
       {/* third section */}
       {/* Explore ideas from other educators */}
-      <div className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA] shadow-top-bottom-inner">
+      <div
+        id="ExploreIdeas"
+        className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA] shadow-top-bottom-inner"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto">
           <div className="flex flex-col gap-5">
             <h1 className="text1">Explore ideas from other educators</h1>
@@ -264,7 +269,7 @@ const DigitalPortfolioSection = () => {
       {/* 4 seCTION */}
       {/* Housing student work
        */}
-      <div className="sm:pt-20 pt-12 sm:pb-16 pb-12">
+      <div id="Housingstudent" className="sm:pt-20 pt-12 sm:pb-16 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">Housing student work</h1>
@@ -325,7 +330,10 @@ const DigitalPortfolioSection = () => {
       {/* 5 seCTION */}
       {/* Take it to work: Design your Portfolio Site
        */}
-      <div className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA]">
+      <div
+        id="DesignPortfolio"
+        className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA]"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
           {/* first div */}
           <div className="flex flex-col gap-6">
@@ -351,15 +359,29 @@ const DigitalPortfolioSection = () => {
               Click the button 'Review considerations' to learn more.
             </p>
             {/* cards ======> */}
-            <div className="flex flex-wrap md:flex-row flex-col justify-center items-center gap-3">
-              <article className="grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4 max-w-[16rem] w-full">
+            <div
+              className={`flex flex-wrap md:flex-row flex-col justify-center items-center gap-3 ${
+                review ? "hidden" : "block"
+              }`}
+            >
+              <article
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1200"
+                className="grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4 max-w-[16rem] w-full"
+              >
                 <img
                   src="./assets/portfolio12.png"
                   className="w-12 h-12"
                   alt=""
                 />
               </article>
-              <article className="max-w-[16rem] w-full grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4">
+              <article
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1200"
+                className="max-w-[16rem] w-full grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4"
+              >
                 <img
                   src="./assets/portfolio13.png"
                   className="w-12 h-12"
@@ -368,11 +390,88 @@ const DigitalPortfolioSection = () => {
               </article>
             </div>
             {/* button */}
-            <button className="bg-[#4285F4] text-white m-auto py-3 px-4 font-bold mt-1">
+            <button
+              onClick={() => setReview(true)}
+              className={`bg-[#4285F4] text-white m-auto py-3 px-4 font-bold mt-1 ${
+                review ? "hidden" : "block"
+              }`}
+            >
               Review considerations
             </button>
           </div>
+          {/* usestate */}
           {/* third div */}
+          <div className={`flex flex-col gap-1 ${review ? "block" : "hidden"}`}>
+            {/* first card */}
+            <div
+              data-aos="fade-left"
+              data-aos-delay="60"
+              data-aos-duration="1200"
+              className={`grid place-content-start`}
+            >
+              <article className="bg-[#DADCE0] flex justify-around gap-x-10 items-center sm:px-20 px-10 py-6 rounded-lg sm:w-[55vw]">
+                <img
+                  src="./assets/portfolio12.png"
+                  className="w-12 h-12"
+                  alt=""
+                />
+                <p className="paragraph">Why are you making a site?</p>
+              </article>
+            </div>
+            {/* second card */}
+            <div
+              data-aos="fade-right"
+              data-aos-delay="70"
+              data-aos-duration="1800"
+              className={`grid place-content-end`}
+            >
+              <article className="bg-[#DADCE0] flex  gap-x-10 items-center sm:px-20 px-10 py-6 rounded-lg justify-between sm:w-[55vw]">
+                <p className="paragraph">What content will go on it?</p>
+                <img
+                  src="./assets/portfolio13.png"
+                  className="w-12 h-12"
+                  alt=""
+                />
+              </article>
+            </div>
+            {/* third card */}
+            <div
+              data-aos="fade-left"
+              data-aos-delay="80"
+              data-aos-duration="2200"
+              className={`grid place-content-start`}
+            >
+              <article className="bg-[#DADCE0] flex justify-around gap-x-10 items-center sm:px-20 px-10 py-6 rounded-lg sm:w-[55vw]">
+                <img
+                  src="./assets/portfolio12.png"
+                  className="w-12 h-12"
+                  alt=""
+                />
+                <p className="paragraph">
+                  What is the structure of the site? What pages will go on it?
+                </p>
+              </article>
+            </div>
+            {/* fourth card */}
+            <div
+              data-aos="fade-right"
+              data-aos-delay="100"
+              data-aos-duration="2800"
+              className={`grid place-content-end`}
+            >
+              <article className="bg-[#DADCE0] flex  gap-x-10 items-center sm:px-20 px-10 py-6 rounded-lg justify-between sm:w-[55vw]">
+                <p className="paragraph">
+                  What type of media do you need to gather?
+                </p>
+                <img
+                  src="./assets/portfolio13.png"
+                  className="w-12 h-12"
+                  alt=""
+                />
+              </article>
+            </div>
+          </div>
+          {/* fourth div */}
           <div className="flex flex-col gap-6 mt-2">
             <p className="paragraph">
               Below you will find a link to a Doc that will guide you through
@@ -438,6 +537,18 @@ const DigitalPortfolioSection = () => {
         </div>
       </div>
       {/*END oF 6 sEctIOn */}
+
+      {/* last footer */}
+      <div className="pt-16 pb-24 bg-[#3C4043] grid place-items-center">
+        <div className="grid place-items-center gap-y-3">
+          {/*  */}
+          <FaRegCheckCircle className="text-white text-[3.3rem]" />
+          <p className="text-white">
+            It looks like you've completed this lesson.
+          </p>
+        </div>
+      </div>
+      {/*end of last footer */}
     </div>
   );
 };
