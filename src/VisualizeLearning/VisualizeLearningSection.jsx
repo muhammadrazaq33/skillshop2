@@ -1,7 +1,18 @@
 import React, { useState } from "react";
+import { Collapse } from "react-collapse";
+import { FaMinus } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
 
 const VisualizeLearningSection = () => {
   const [activeIndex, setActiveIndex] = useState(0); // State to track active paragraph index
+  const [open, setOpen] = useState(false);
+
+  const toggle1 = (id) => {
+    if (open === id) {
+      return setOpen(null);
+    }
+    setOpen(id);
+  };
 
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -20,7 +31,10 @@ const VisualizeLearningSection = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#startDrive" className="double_click_protection">
+                    <a
+                      href="#StudentChoice"
+                      className="double_click_protection"
+                    >
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -31,7 +45,7 @@ const VisualizeLearningSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#UploadMaterial"
+                      href="#ApplyDigitalTools"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -44,7 +58,7 @@ const VisualizeLearningSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#UploadMaterial"
+                      href="#FacilitateLearning"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -69,7 +83,7 @@ const VisualizeLearningSection = () => {
                   className="w-[2.2rem] h-[3rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Drawings
                 </h1>
               </div>
@@ -79,7 +93,7 @@ const VisualizeLearningSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Drive
                 </h1>
               </div>
@@ -89,7 +103,7 @@ const VisualizeLearningSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Slides
                 </h1>
               </div>
@@ -99,7 +113,7 @@ const VisualizeLearningSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Jamboard
                 </h1>
               </div>
@@ -145,7 +159,7 @@ const VisualizeLearningSection = () => {
       {/* 2 seCTION */}
       {/* Promote student choice
        */}
-      <div className="sm:pt-20 pt-12 pb-12">
+      <div id="StudentChoice" className="sm:pt-20 pt-12 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">Promote student choice</h1>
@@ -171,8 +185,250 @@ const VisualizeLearningSection = () => {
       {/*end oF  2 seCTION */}
 
       {/* 3 section */}
+      {/* Apply digital tools in your classroom */}
+      <div
+        id="ApplyDigitalTools"
+        className="sm:pt-20 pt-16 sm:pb-24 pb-16 bg-[#F9F9FA] shadow-top-bottom-inner"
+      >
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
+          <div className="flex flex-col gap-6">
+            <h1 className="text1 leading-[2.4rem]">
+              Apply digital tools in your classroom
+            </h1>
+            <p className="paragraph">
+              Technology can provide your students plenty of options for how to
+              display their knowledge. However, students come with varying
+              levels of background knowledge about digital tools. Some might
+              need exposure to certain digital tools, some may need guidance in
+              determining when to use different tools, and others may be ready
+              to learn advanced techniques while using the tools.
+            </p>
+          </div>
+          {/* Accordian div */}
+          <div className="flex flex-col justify-end gap-4 mt-10">
+            <p className="Bold">Click below to expand each item.</p>
+            {/* Accordian */}
+            <div>
+              {/* first */}
+              <div className="flex flex-col gap-1">
+                <article
+                  onClick={() => toggle1(1)}
+                  className={`flex items-center gap-6 px-6 py-5 rounded-md cursor-pointer bg-[#dadce0] hover:bg-[#1A73E8] duration-700 hover:text-white ${
+                    open === true && "active2"
+                  }`}
+                >
+                  <button>{open === 1 ? <FaMinus /> : <FaPlus />}</button>
+                  <p className="text-[18px] ">Flowcharts</p>
+                </article>
+                <Collapse isOpened={open === 1}>
+                  <article className="px-6 py-4 grid md:grid-cols-2 grid-cols-1 gap-4">
+                    <div>
+                      <img src="./assets/visual20.png" alt="" />
+                    </div>
+                    <div>
+                      <p className="paragraph">
+                        Flowcharts can be a great tool for students, especially
+                        when they need to relay information that is sequential
+                        or has a cause-and-effect relationship. In Google
+                        Drawings and Slides, students can insert a diagram to{" "}
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://support.google.com/a/users/answer/9310374?hl=en"
+                          className="text-[blue] underline"
+                        >
+                          create a flowchart
+                        </a>
+                        . They can choose from different chart types, such as
+                        those that show events on a timeline, a cycle of events,
+                        or the relationship of events or ideas to each other, to
+                        suit the type of information being displayed. They can
+                        also build their own custom flowchart using shapes and
+                        arrows if none of the diagram templates suit their
+                        needs. You can use this{" "}
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://applieddigitalskills.withgoogle.com/c/middle-and-high-school/en/make-a-flowchart/overview.html"
+                          className="text-[blue] underline"
+                        >
+                          video lesson
+                        </a>{" "}
+                        to introduce your students to creating flowcharts using
+                        Google Drawings. Check out this example of a custom{" "}
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://docs.google.com/drawings/d/12twl6G1qCeaAftrKxhwgk242P7I0saHs-45g7jQZvLY/edit?usp=sharing"
+                          className="text-[blue] underline"
+                        >
+                          flowchart
+                        </a>{" "}
+                        created in Google Drawings.
+                      </p>
+                    </div>
+                  </article>
+                </Collapse>
+              </div>
+              {/* second  */}
+              <div className="flex flex-col gap-1">
+                <article
+                  onClick={() => toggle1(2)}
+                  className={`flex items-center gap-6 px-6 py-5 rounded-md cursor-pointer bg-[#dadce0] hover:bg-[#1A73E8] duration-700 hover:text-white ${
+                    open === true && "active2"
+                  }`}
+                >
+                  <button>{open === 2 ? <FaMinus /> : <FaPlus />}</button>
+                  <p className="text-[18px] ">Online Visual Books</p>
+                </article>
+                <Collapse isOpened={open === 2}>
+                  <article className="px-6 py-4 flex flex-col gap-5">
+                    <p className="paragraph">
+                      By creating an online visual book, students can pair
+                      images with text to display their knowledge. Students can
+                      use Google Slides to create other styles of presentations,
+                      such as magazines, brochures, or informational picture
+                      books. Slides makes it easy for students to&nbsp;
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://support.google.com/docs/answer/97447?hl=en&amp;co=GENIE.Platform%3DDesktop"
+                        className="text-[blue] underline"
+                      >
+                        add and manipulate images
+                      </a>{" "}
+                      and text and to choose different layout options to tailor
+                      the pages of their visual book to best display the
+                      information. The best part is, these books can be easily
+                      shared with others. You can use this&nbsp;
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://applieddigitalskills.withgoogle.com/c/middle-and-high-school/en/create-a-digital-picture-book/overview.html"
+                        className="text-[blue] underline"
+                      >
+                        video lesson
+                      </a>{" "}
+                      to guide students through the process of creating a visual
+                      book in Google Slides or show them this&nbsp;
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://docs.google.com/presentation/d/1uE7dGeVaTWwB7Pc_1JvXtD8UPZ_s3SX6B0fTIK3nL_U/edit?usp=sharing"
+                        className="text-[blue] underline"
+                      >
+                        example book
+                      </a>{" "}
+                      to inspire their own creative ideas.
+                    </p>
+                  </article>
+                </Collapse>
+              </div>
+              {/* third */}
+              <div className="flex flex-col gap-1">
+                <article
+                  onClick={() => toggle1(3)}
+                  className={`flex items-center gap-6 px-6 py-5 rounded-md cursor-pointer bg-[#dadce0] hover:bg-[#1A73E8] duration-700 hover:text-white ${
+                    open === true && "active2"
+                  }`}
+                >
+                  <button>{open === 3 ? <FaMinus /> : <FaPlus />}</button>
+                  <p className="text-[18px] ">Infographic</p>
+                </article>
+                <Collapse isOpened={open === 3}>
+                  <article className="px-6 py-4">
+                    <p className="paragraph">
+                      Your students can visually represent information by
+                      combining images, shapes, charts, and text, to create an
+                      infographic. When creating an infographic, it is important
+                      to organize the components in a way that creates a
+                      cohesive and meaningful visual representation of the
+                      information. Google Jamboard is one option that students
+                      can use to create infographics. Jamboard is a digital
+                      whiteboard tool that allows your students to combine and
+                      overlap visual components, and&nbsp;
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://support.google.com/jamboard/answer/9428070?hl=en&amp;ref_topic=7383644"
+                        className="text-[blue] underline"
+                      >
+                        write over them
+                      </a>{" "}
+                      to create one symbolic visual. Google Drawings is also
+                      useful when creating an infographic because it allows
+                      students to create graphs and charts, and use images to
+                      represent data. You can use this&nbsp;
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://applieddigitalskills.withgoogle.com/c/middle-and-high-school/en/design-an-infographic-in-google-drawings/overview.html"
+                        className="text-[blue] underline"
+                      >
+                        video lesson
+                      </a>{" "}
+                      on building an infographic in Google Drawings to show your
+                      students how to build an infographic like this&nbsp;
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://docs.google.com/drawings/d/1bZEOFRF3IpzSkCrZFDxp8q7hRQF0B4QpSwGiPta2Sg0/edit?usp=sharing"
+                        className="text-[blue] underline"
+                      >
+                        example
+                      </a>
+                      .
+                    </p>
+                  </article>
+                </Collapse>
+              </div>
+              {/* fourth */}
+              <div className="flex flex-col gap-1">
+                <article
+                  onClick={() => toggle1(4)}
+                  className={`flex items-center gap-6 px-6 py-5 rounded-md cursor-pointer bg-[#dadce0] hover:bg-[#1A73E8] duration-700 hover:text-white ${
+                    open === true && "active2"
+                  }`}
+                >
+                  <button>{open === 4 ? <FaMinus /> : <FaPlus />}</button>
+                  <p className="text-[18px] ">Image Upload & Commenting</p>
+                </article>
+                <Collapse isOpened={open === 4}>
+                  <article className="px-6 py-4 grid md:grid-cols-2 grid-cols-1 gap-4">
+                    <div className="flex flex-col gap-5">
+                      <p className="paragraph">
+                        For students who are more comfortable displaying their
+                        knowledge through a tangible presentation, such as a
+                        clay model or diorama, uploading a picture of their
+                        project to Google Drive can be a great way to share
+                        their work online with their classmates. After sharing
+                        an image on Google Drive, classmates are able to give
+                        feedback on the project by selecting a certain part of
+                        the image and adding a comment or question. This
+                        directed feedback can be a great way to start a
+                        discussion about the project. However, when utilizing
+                        this type of feedback system, class rules should be
+                        established to make sure all comments are appropriate
+                        and supportive.
+                      </p>
+                    </div>
+                    <div>
+                      <img src="./assets/visual21.png" alt="" />
+                    </div>
+                  </article>
+                </Collapse>
+              </div>
+            </div>
+            {/*end of Accordian */}
+          </div>
+          {/*end of Accordian div */}
+        </div>
+      </div>
+      {/*end of 3 section */}
+
+      {/* 4 section */}
       {/* Facilitate project-based learning */}
-      <div className="sm:pt-20 pt-12 sm:pb-16 pb-12">
+      <div id="FacilitateLearning" className="sm:pt-20 pt-12 sm:pb-16 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col  sm:gap-16 gap-10">
           <div className="flex flex-col sm:gap-16 gap-12">
             <div className="flex flex-col gap-6">
@@ -332,7 +588,7 @@ const VisualizeLearningSection = () => {
           </div>
         </div>
       </div>
-      {/*end of 3 section */}
+      {/*end of 4 section */}
 
       <div className="bg-[url('/assets/visual7.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
