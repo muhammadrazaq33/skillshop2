@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
+import { Collapse } from "react-collapse";
+import { FaMinus } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
 
 const PublishWorkSection = () => {
   const [activeIndex, setActiveIndex] = useState(0); // State to track active paragraph index
+  const [open, setOpen] = useState(false);
+
+  const toggle1 = (id) => {
+    if (open === id) {
+      return setOpen(null);
+    }
+    setOpen(id);
+  };
 
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -21,7 +32,7 @@ const PublishWorkSection = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#StartMeeting" className="double_click_protection">
+                    <a href="#CreateSpace" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -32,7 +43,7 @@ const PublishWorkSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#ScheduleMeeting"
+                      href="#FacilitateGoogleSite"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -44,7 +55,7 @@ const PublishWorkSection = () => {
                     </a>
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a href="#ShareScreen" className="double_click_protection">
+                    <a href="#BuildWebsite" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -54,7 +65,10 @@ const PublishWorkSection = () => {
                     </a>{" "}
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a href="#RaiseHand" className="double_click_protection">
+                    <a
+                      href="#ShareGoogleSites"
+                      className="double_click_protection"
+                    >
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -111,7 +125,7 @@ const PublishWorkSection = () => {
       {/* 2 seCTION */}
       {/* Create a space for students to share their learning
        */}
-      <div className="sm:pt-20 pt-12 pb-12">
+      <div id="CreateSpace" className="sm:pt-20 pt-12 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
@@ -170,7 +184,10 @@ const PublishWorkSection = () => {
       {/* 3 seCTION */}
       {/* Facilitate the use of Google Sites
        */}
-      <div className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA] shadow-top-bottom-inner">
+      <div
+        id="FacilitateGoogleSite"
+        className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA] shadow-top-bottom-inner"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
@@ -203,7 +220,7 @@ const PublishWorkSection = () => {
 
       {/* 4 section */}
       {/* Build a website */}
-      <div className="sm:pt-20 pt-12 sm:pb-16 pb-12">
+      <div id="BuildWebsite" className="sm:pt-20 pt-12 sm:pb-16 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col  sm:gap-16 gap-10">
           <div className="flex flex-col sm:gap-16 gap-12">
             <div className="flex flex-col gap-6">
@@ -330,11 +347,13 @@ const PublishWorkSection = () => {
       </div>
       {/*end of 4 section */}
 
-      {/* 5 seCTION */}
-      {/* Customize and share Google Sites
-       */}
-      <div className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA] top-shadow">
-        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
+      {/* 3 section */}
+      {/* Customize and share Google Sites */}
+      <div
+        id="ShareGoogleSites"
+        className="sm:pt-20 pt-16 sm:pb-24 pb-16 bg-[#F9F9FA] top-shadow"
+      >
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
               Customize and share Google Sites
@@ -346,12 +365,124 @@ const PublishWorkSection = () => {
               celebrate student work. Publishing their own website allows your
               students to take ownership of their learning and use their
               strengths to make a creative tool to share their knowledge with
-              others.{" "}
+              others.
             </p>
           </div>
+          {/* Accordian div */}
+          <div className="flex flex-col justify-end gap-4 mt-10">
+            <p className="Bold">Click below to expand each item.</p>
+            {/* Accordian */}
+            <div>
+              {/* first */}
+              <div className="flex flex-col gap-1">
+                <article
+                  onClick={() => toggle1(1)}
+                  className={`flex items-center gap-6 px-6 py-5 rounded-md cursor-pointer bg-[#dadce0] hover:bg-[#1A73E8] duration-700 hover:text-white ${
+                    open === true && "active2"
+                  }`}
+                >
+                  <button>{open === 1 ? <FaMinus /> : <FaPlus />}</button>
+                  <p className="text-[18px] ">Customizing their content</p>
+                </article>
+                <Collapse isOpened={open === 1}>
+                  <article className="px-6 py-4">
+                    <p className="paragraph">
+                      Google Sites is a flexible option for publishing student
+                      work it allows your students to control the appearance of
+                      text, images, and other content they include on a page.
+                      While adding text to a page, students can quickly change
+                      the text’s style to differentiate headers from normal
+                      text. This can help them emphasize certain text and give
+                      the page a more personalized appearance. They can also add
+                      links from specific words or phrases on one page of their
+                      website to another page or website.
+                    </p>
+                    <p className="paragraph">
+                      If your students used placeholders while designing the
+                      layout of their page, they can replace them with a variety
+                      of types of embedded media to provide more context for
+                      visitors to their website. They can include pictures that
+                      relate to the text on the page or{" "}
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://support.google.com/sites/answer/90569"
+                        className="text-[blue] underline"
+                      >
+                        embed other types of files and content
+                      </a>
+                      , such as YouTube videos, maps, or documents from Drive.
+                      For example, a student whose website is about musical
+                      theory might embed a video of a musical performance for
+                      the audience to listen to. This can help make a website
+                      more meaningful and provide interactive ways for the
+                      audience to engage with the content.
+                    </p>
+                  </article>
+                </Collapse>
+              </div>
+              {/* second  */}
+              <div className="flex flex-col gap-1">
+                <article
+                  onClick={() => toggle1(2)}
+                  className={`flex items-center gap-6 px-6 py-5 rounded-md cursor-pointer bg-[#dadce0] hover:bg-[#1A73E8] duration-700 hover:text-white ${
+                    open === true && "active2"
+                  }`}
+                >
+                  <button>{open === 2 ? <FaMinus /> : <FaPlus />}</button>
+                  <p className="text-[18px] ">Safe sharing practices</p>
+                </article>
+                <Collapse isOpened={open === 2}>
+                  <article className="px-6 py-4 flex flex-col gap-5">
+                    <p className="paragraph">
+                      Students can make their website public so that anyone can
+                      read their content, which increases the number of people
+                      they can share their work with.
+                    </p>
+                    <p className="paragraph">
+                      While reaching a larger audience can be beneficial if
+                      students want to communicate with their local or global
+                      community, you should make sure to share safe practices
+                      with your students and their guardians. Spend time
+                      discussing personal identifiable information that the
+                      students should not share online, such as their location,
+                      phone number, passwords, or any other information that
+                      should be kept private.
+                    </p>
+                    <p className="paragraph">
+                      If students do not want their website to be publicly
+                      accessible, they can{" "}
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://support.google.com/sites/answer/6372880?hl=en#zippy=%2Cchoose-who-can-see-your-site"
+                        className="text-[blue] underline"
+                      >
+                        control their site's visibility
+                      </a>{" "}
+                      by only sharing their website with specific people, such
+                      as their teachers, family, or friends. You might encourage
+                      students to complete this{" "}
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://applieddigitalskills.withgoogle.com/c/middle-and-high-school/en/create-a-responsible-blog-with-google-sites/overview.html"
+                        className="text-[blue] underline"
+                      >
+                        video lesson
+                      </a>{" "}
+                      to learn more about how to publish a responsible website.
+                    </p>
+                  </article>
+                </Collapse>
+              </div>
+            </div>
+            {/*end of Accordian */}
+          </div>
+          {/*end of Accordian div */}
         </div>
       </div>
-      {/*end oF  5 seCTION */}
+      {/*end of 3 section */}
 
       <div className="bg-[url('/assets/work4.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
