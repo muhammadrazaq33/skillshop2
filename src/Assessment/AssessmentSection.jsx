@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 import { SlBadge } from "react-icons/sl";
+import { Collapse } from "react-collapse";
+import { FaMinus } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa6";
 
 const AssessmentSection = () => {
   const [show, setShow] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0); // State to track active paragraph index
+
+  const [open, setOpen] = useState(false);
+
+  const toggle1 = (id) => {
+    if (open === id) {
+      return setOpen(null);
+    }
+    setOpen(id);
+  };
 
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -30,7 +43,10 @@ const AssessmentSection = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#startDrive" className="double_click_protection">
+                    <a
+                      href="#AssessWithPurpose"
+                      className="double_click_protection"
+                    >
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -41,7 +57,7 @@ const AssessmentSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#UploadMaterial"
+                      href="#focusedassessments"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -54,7 +70,7 @@ const AssessmentSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#OrganizeItems"
+                      href="#AssessmentFeature"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -67,7 +83,7 @@ const AssessmentSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#OrganizeItems"
+                      href="#AssessmentTools"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -80,7 +96,7 @@ const AssessmentSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#OrganizeItems"
+                      href="#SuccessStories"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -105,7 +121,7 @@ const AssessmentSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Forms
                 </h1>
               </div>
@@ -115,7 +131,7 @@ const AssessmentSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Classroom
                 </h1>
               </div>
@@ -245,7 +261,10 @@ const AssessmentSection = () => {
 
       {/* 3 SeCtiON */}
       {/* Assess with a purpose */}
-      <div className="sm:pb-20 pb-12 md:pt-28 pt-12 bg-[#F9F9FA] shadow-top-bottom-inner">
+      <div
+        id="AssessWithPurpose"
+        className="sm:pb-20 pb-12 md:pt-28 pt-12 bg-[#F9F9FA] shadow-top-bottom-inner"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-12">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">Assess with a purpose</h1>
@@ -292,7 +311,7 @@ const AssessmentSection = () => {
 
       {/* 4 SeCtiON */}
       {/* Create focused assessments */}
-      <div className="sm:pb-16 pb-12 md:pt-20 pt-12">
+      <div id="focusedassessments" className="sm:pb-16 pb-12 md:pt-20 pt-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
           {/* first div */}
           <div className="flex flex-col gap-6">
@@ -451,8 +470,11 @@ const AssessmentSection = () => {
 
       {/* 5 section */}
       {/* Assessment features in Google Forms */}
-      <div className="sm:pb-16 pb-12 md:pt-20 pt-12 bg-[#F9F9FA]">
-        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
+      <div
+        id="AssessmentFeature"
+        className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA]"
+      >
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
               Assessment features in Google Forms
@@ -463,6 +485,180 @@ const AssessmentSection = () => {
               examples to learn more.
             </p>
           </div>
+          {/* Accordian div */}
+          <div className="flex flex-col justify-end gap-4 mt-10">
+            <p className="Bold">Click below to expand each item.</p>
+            {/* Accordian */}
+            <div>
+              {/* first */}
+              <div className="flex flex-col gap-1">
+                <article
+                  onClick={() => toggle1(1)}
+                  className={`flex items-center gap-6 px-6 py-5 rounded-md cursor-pointer bg-[#dadce0] hover:bg-[#1A73E8] duration-700 hover:text-white ${
+                    open === true && "active2"
+                  }`}
+                >
+                  <button>
+                    <FaCheck />
+                  </button>
+                  <p className="text-[18px] ">Create quizzes</p>
+                </article>
+                <Collapse isOpened={open === 1}>
+                  <article className="px-6 py-4 grid md:grid-cols-2 grid-cols-1 gap-4">
+                    <div>
+                      <img src="./assets/assess20.png" alt="" />
+                    </div>
+                    <div>
+                      <p className="paragraph">
+                        The ability to create quizzes in Google Forms can save
+                        you a lot of time. To&nbsp;
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://support.google.com/docs/answer/7032287?hl=en"
+                          className="text-[blue] underline"
+                        >
+                          create a quiz in Google Forms
+                        </a>
+                        , open a new form, go to <strong>Settings</strong>, and
+                        turn on <strong>Make this a quiz</strong>. This allows
+                        you to assign correct and incorrect answers that the
+                        form will grade immediately. The quiz feature also makes
+                        it possible for you to assign point values for each
+                        question, provide feedback for incorrect answers, and
+                        even control when grades will be released. All of these
+                        features can simplify your grading process and help
+                        empower your students to review their scores upon
+                        submitting their answers. Check out this{" "}
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://docs.google.com/forms/d/e/1FAIpQLSfZEanqjY80-3Nw-Xkxg1IH96oYFFCxoNFgSErMBIdZ2Mh3xg/viewform"
+                          className="text-[blue] underline"
+                        >
+                          quiz example
+                        </a>
+                        .
+                      </p>
+                    </div>
+                  </article>
+                </Collapse>
+              </div>
+              {/* second  */}
+              <div className="flex flex-col gap-1">
+                <article
+                  onClick={() => toggle1(2)}
+                  className={`flex items-center gap-6 px-6 py-5 rounded-md cursor-pointer bg-[#dadce0] hover:bg-[#1A73E8] duration-700 hover:text-white ${
+                    open === true && "active2"
+                  }`}
+                >
+                  <button>
+                    <FaCheck />
+                  </button>
+                  <p className="text-[18px] ">Have students upload files</p>
+                </article>
+                <Collapse isOpened={open === 2}>
+                  <article className="px-6 py-4 grid md:grid-cols-2 grid-cols-1 gap-4">
+                    <div>
+                      <img src="./assets/assess21.png" alt="" />
+                    </div>
+                    <div className="flex flex-col gap-5">
+                      <p className="paragraph">
+                        For a more open-ended formative assessment, you can
+                        create a&nbsp;
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://support.google.com/a/users/answer/9308632?hl=en"
+                          className="text-[blue] underline"
+                        >
+                          file upload question
+                        </a>
+                        . To create a file upload question, create a{" "}
+                        <strong>new question</strong>, provide instructions for
+                        what your students should upload in the question box,
+                        click the <strong>drop-down menu</strong> next to the
+                        question, and select&nbsp;<strong>File upload</strong>
+                        .&nbsp;
+                      </p>
+                      <p className="paragraph">
+                        With this type of question, you can collect other types
+                        of formative work or resources from your students. For
+                        example, you might want to assess whether students can
+                        identify a specific plant type in a local habitat or
+                        recite something in a new language. You can use the file
+                        upload feature to collect images, audio recordings, and
+                        even videos that your students create to demonstrate
+                        their knowledge. Check out this&nbsp;
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://docs.google.com/forms/d/e/1FAIpQLScDW7Lb8Ogv7_hUGepo9TNrRQbkgDdmXRDfzWcAPTNVZ4ftdQ/viewform"
+                          className="text-[blue] underline"
+                        >
+                          example
+                        </a>{" "}
+                        that requires students to upload files.
+                      </p>
+                    </div>
+                  </article>
+                </Collapse>
+              </div>
+              {/* third */}
+              <div className="flex flex-col gap-1">
+                <article
+                  onClick={() => toggle1(3)}
+                  className={`flex items-center gap-6 px-6 py-5 rounded-md cursor-pointer bg-[#dadce0] hover:bg-[#1A73E8] duration-700 hover:text-white ${
+                    open === true && "active2"
+                  }`}
+                >
+                  <button>
+                    <FaCheck />
+                  </button>
+                  <p className="text-[18px] ">Include images as answers</p>
+                </article>
+                <Collapse isOpened={open === 3}>
+                  <article className="px-6 py-4 grid md:grid-cols-2 grid-cols-1 gap-4">
+                    <div>
+                      <img src="./assets/assess22.png" alt="" />
+                    </div>
+                    <div className="flex flex-col gap-5">
+                      <p className="paragraph">
+                        Google Forms empowers you to&nbsp;
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://support.google.com/docs/answer/2839737?hl=en#zippy=%2Cadd-image-or-video"
+                          className="text-[blue] underline"
+                        >
+                          add images
+                        </a>{" "}
+                        to your response options. So instead of asking your
+                        students to provide written answers or pick from a list
+                        of numbered solutions, you can have them select the
+                        image that best identifies an answer. This can make your
+                        quizzes more visual and accessible for your students. To
+                        add images for each response option, hover over the
+                        response and click the&nbsp;Add image&nbsp;icon to the
+                        right of the response. Check out this&nbsp;
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://docs.google.com/forms/d/e/1FAIpQLSeYV1UwcQNJGt46wPWcrIWjW5coySqJctsvfKMzot9ePDA8Bw/viewform"
+                          className="text-[blue] underline"
+                        >
+                          example
+                        </a>{" "}
+                        that uses images as answer options.
+                      </p>
+                    </div>
+                  </article>
+                </Collapse>
+              </div>
+            </div>
+            {/*end of Accordian */}
+          </div>
+          {/*end of Accordian div */}
         </div>
       </div>
       {/*end of 5 section */}

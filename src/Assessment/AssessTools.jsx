@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const AssessTools = () => {
   const [activeIndex, setActiveIndex] = useState(0); // State to track active paragraph index
+  const [review, setReview] = useState(false);
 
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -11,7 +12,10 @@ const AssessTools = () => {
     <div>
       {/* 5 SeCtiON */}
       {/* Assessment tools in Google Classroom */}
-      <div className="sm:pb-16 pb-12 md:pt-20 pt-12 bg-[#F9F9FA] shadow-top-bottom-inner">
+      <div
+        id="AssessmentTools"
+        className="sm:pb-16 pb-12 md:pt-20 pt-12 bg-[#F9F9FA] shadow-top-bottom-inner"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
           {/* first div */}
           <div className="flex flex-col gap-6">
@@ -154,10 +158,11 @@ const AssessTools = () => {
       </div>
       {/*End oF 5 SeCtiON */}
 
-      {/* 6 SeCtiON */}
-      {/* Success stories */}
-      <div className="sm:pb-16 pb-12 md:pt-20 pt-12">
-        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
+      {/* 5 seCTION */}
+      {/* Success stories
+       */}
+      <div id="SuccessStories" className="sm:pt-20 pt-12 sm:pb-16 pb-12">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
           {/* first div */}
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">Success stories</h1>
@@ -166,9 +171,132 @@ const AssessTools = () => {
               experiences.
             </p>
           </div>
+          {/* second div */}
+          <div className="flex flex-col gap-7 mt-8">
+            <p className="Bold">Click the Start button to learn more.</p>
+            {/* cards ======> */}
+            <div
+              className={`grid md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-2.5  ${
+                review ? "hidden" : "block"
+              }`}
+            >
+              <article
+                // data-aos="fade-up"
+                // data-aos-delay="50"
+                // data-aos-duration="1200"
+                className="grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4 max-w-[16rem] w-full"
+              >
+                <img src="./assets/assess23.png" className="w-24 h-24" alt="" />
+              </article>
+              <article
+                // data-aos="fade-up"
+                // data-aos-delay="50"
+                // data-aos-duration="1200"
+                className="max-w-[16rem] w-full grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4"
+              >
+                <img src="./assets/assess24.png" className="w-24 h-24" alt="" />
+              </article>
+              <article
+                // data-aos="fade-up"
+                // data-aos-delay="50"
+                // data-aos-duration="1200"
+                className="max-w-[16rem] w-full grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4"
+              >
+                <img src="./assets/assess25.png" className="w-24 h-24" alt="" />
+              </article>
+              <article
+                // data-aos="fade-up"
+                // data-aos-delay="50"
+                // data-aos-duration="1200"
+                className="max-w-[16rem] w-full grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4"
+              >
+                <img src="./assets/assess26.png" className="w-24 h-24" alt="" />
+              </article>
+            </div>
+            {/* button */}
+            <button
+              onClick={() => setReview(true)}
+              className={`bg-[#4285F4] text-white m-auto py-3 px-4 font-bold mt-1 ${
+                review ? "hidden" : "block"
+              }`}
+            >
+              Start
+            </button>
+          </div>
+          {/* usestate */}
+          {/* third div */}
+          <div className={`flex flex-col gap-1 ${review ? "block" : "hidden"}`}>
+            {/* first card */}
+            <div
+              // data-aos="fade-left"
+              // data-aos-delay="60"
+              // data-aos-duration="1200"
+              className={`grid place-content-start max-w-[50rem] w-full`}
+            >
+              <article className="bg-[#DADCE0] flex justify-around  items-center rounded-lg sm:gap-x-10 gap-x-6 sm:pl-20 px-8 py-4 sm:py-6">
+                <img src="./assets/assess23.png" className="w-24 h-24" alt="" />
+                <p className="paragraph">
+                  I use Classroom to post timely assignments in an organized
+                  way. Using Topics, I can help direct my students to the
+                  objectives, questions, resources, and assignments we are
+                  working on each week.
+                </p>
+              </article>
+            </div>
+            {/* second card */}
+            <div className={`grid place-content-end w-full`}>
+              <article className="bg-[#DADCE0] flex sm:gap-x-10 gap-x-6 px-8 py-4 sm:py-6 items-center sm:pr-20 rounded-lg justify-between max-w-[50rem]">
+                <p className="paragraph">
+                  Discussions in Google Classroom are a great way for me to
+                  understand how students are thinking about a topic. Being able
+                  to defend their answers to peers or explain their thinking
+                  enhances their understanding of the content.
+                </p>
+                <img src="./assets/assess25.png" className="w-24 h-24" alt="" />
+              </article>
+            </div>
+            {/* third card */}
+            <div className={`grid place-content-start w-full`}>
+              <article className="bg-[#DADCE0] flex justify-around items-center sm:gap-x-10 gap-x-6 sm:pl-20 px-8 py-4 sm:py-6 rounded-lg max-w-[50rem]">
+                <img src="./assets/assess24.png" className="w-24 h-24" alt="" />
+                <p className="paragraph">
+                  Whenever I create a Google Form, I present students with the
+                  learning objectives on the Form. If I am using the Form as a
+                  review of many topics, I will list them all on a single page
+                  before presenting students with questions.
+                </p>
+              </article>
+            </div>
+            {/* fourth card */}
+            <div className={`grid place-content-end w-full`}>
+              <article className="bg-[#DADCE0] flex sm:gap-x-10 gap-x-6 px-8 py-4 sm:py-6 items-center sm:pr-20 rounded-lg justify-between max-w-[50rem]">
+                <p className="paragraph">
+                  I use Google Forms and Google Classroom together. I import
+                  assessment grades from Forms into Classroom and begin a
+                  dialogue with my students. Then I suggest specific courses of
+                  action to them with private comments or push them to take
+                  charge over their own learning.
+                </p>
+                <img src="./assets/assess26.png" className="w-24 h-24" alt="" />
+              </article>
+            </div>
+            {/* fifth card */}
+            <div className={`grid place-content-start w-full`}>
+              <article className="bg-[#DADCE0] flex justify-around items-center sm:gap-x-10 gap-x-6 sm:pl-20 px-8 py-4 sm:py-6 rounded-lg max-w-[50rem]">
+                <img src="./assets/assess24.png" className="w-24 h-24" alt="" />
+                <p className="paragraph">
+                  I utilize the Quiz assignment feature in Google Forms. This
+                  provides feedback to each student based on their question
+                  performance. I also include correct and incorrect feedback on
+                  each question. So, if students incorrectly answer questions,
+                  they are empowered to take learning into their own hands.
+                </p>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
-      {/*End oF 6 SeCtiON */}
+      {/*end oF  4 seCTION */}
 
       <div className="bg-[url('/assets/assess6.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
@@ -226,11 +354,9 @@ const AssessTools = () => {
 
       {/* ​​Additional Resources​​ */}
       <div className="sm:pb-16 pb-12  pt-12">
-        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col sm:gap-10 gap-4">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col sm:gap-10 gap-6">
           <div className="flex flex-col sm:gap-12 gap-8">
-            <h1 className="leading-[2.4rem] text5">
-              ​​Additional Resources​​
-            </h1>
+            <h1 className="leading-[2.4rem] text5">​​Additional Resources​​</h1>
             <p className="paragraph">
               To learn more about this topic, click the links below.
             </p>

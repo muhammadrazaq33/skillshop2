@@ -341,7 +341,7 @@ const GoogleSlidesSection = () => {
       </div>
       {/*end of 3 section */}
 
-      {/* 5 seCTION */}
+      {/* 4 seCTION */}
       {/* How educators use Google Slides
        */}
       <div id="Educators" className="sm:pt-20 pt-12 sm:pb-16 pb-12">
@@ -479,7 +479,7 @@ const GoogleSlidesSection = () => {
 
       <div className="bg-[url('/assets/slide5.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
-      {/*  seCTION */}
+      {/* 5 seCTION */}
       {/* Take it to work: Create an interactive slides presentation
        */}
       <div className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA]">
@@ -546,7 +546,7 @@ const GoogleSlidesSection = () => {
           </div>
         </div>
       </div>
-      {/*end oF   seCTION */}
+      {/*end oF 5  seCTION */}
 
       {/* last footer */}
       <div className="pt-16 pb-24 bg-[#3C4043] grid place-items-center">
