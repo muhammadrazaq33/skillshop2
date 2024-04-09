@@ -25,7 +25,10 @@ const BestPracticesSection = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#startDrive" className="double_click_protection">
+                    <a
+                      href="#LeveragingGoogletools"
+                      className="double_click_protection"
+                    >
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -36,7 +39,7 @@ const BestPracticesSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#UploadMaterial"
+                      href="#PowerOfGoogle"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -49,7 +52,7 @@ const BestPracticesSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#OrganizeItems"
+                      href="#Engagestudents"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -61,10 +64,7 @@ const BestPracticesSection = () => {
                     </a>{" "}
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#OrganizeItems"
-                      className="double_click_protection"
-                    >
+                    <a href="#GetInspired" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -75,7 +75,7 @@ const BestPracticesSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#OrganizeItems"
+                      href="#Setupmentorship"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -100,7 +100,7 @@ const BestPracticesSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="text-[21px] text-[#5f6368] max-w-[12rem] leading-[1.6rem]">
                   Google Workspace for Education
                 </h1>
               </div>
@@ -114,7 +114,7 @@ const BestPracticesSection = () => {
           {/* cards ======> */}
           <div className="flex md:flex-row flex-col justify-center items-center gap-5">
             <article
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-delay="50"
               data-aos-duration="1000"
               // data-aos-easing="ease-in-out"
@@ -126,7 +126,7 @@ const BestPracticesSection = () => {
               </p>
             </article>
             <article
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-delay="60"
               data-aos-duration="1200"
               // data-aos-easing="ease-in-out"
@@ -138,7 +138,7 @@ const BestPracticesSection = () => {
               </p>
             </article>
             <article
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-delay="60"
               data-aos-duration="1200"
               // data-aos-easing="ease-in-out"
@@ -157,7 +157,7 @@ const BestPracticesSection = () => {
       {/* 2 seCTION */}
       {/* Leveraging Google tools for productivity
        */}
-      <div className="sm:pt-20 pt-12 pb-12">
+      <div id="LeveragingGoogletools" className="sm:pt-20 pt-12 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
@@ -288,7 +288,10 @@ const BestPracticesSection = () => {
       {/* 3 seCTION */}
       {/* Harness the power of Google for research
        */}
-      <div className="sm:pt-20 pt-12 sm:pb-24 pb-12 bg-[#F9F9FA] shadow-top-bottom-inner">
+      <div
+        id="PowerOfGoogle"
+        className="sm:pt-20 pt-12 sm:pb-24 pb-12 bg-[#F9F9FA] shadow-top-bottom-inner"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-10">
           {/* first div */}
           <div className="flex flex-col gap-5">
@@ -591,7 +594,7 @@ const BestPracticesSection = () => {
       {/* 4 seCTION */}
       {/* Engage students with interactive videos
        */}
-      <div className="sm:pt-20 pt-12 pb-12">
+      <div id="Engagestudents" className="sm:pt-20 pt-12 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
           {/* first div */}
           <div className="flex flex-col gap-6">
@@ -708,7 +711,10 @@ const BestPracticesSection = () => {
       {/* 5 seCTION */}
       {/* Get inspired by alternate learning models
        */}
-      <div className="sm:pt-20 pt-12 sm:pb-24 pb-12 bg-[#F9F9FA] shadow-top-bottom-inner">
+      <div
+        id="GetInspired"
+        className="sm:pt-20 pt-12 sm:pb-24 pb-12 bg-[#F9F9FA] shadow-top-bottom-inner"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-10">
           {/* first div */}
           <div className="flex flex-col gap-5">
@@ -826,7 +832,7 @@ const BestPracticesSection = () => {
       {/* 6 seCTION */}
       {/* Set up mentorship and support models to guide teachers
        */}
-      <div className="sm:pt-20 pt-12 pb-12">
+      <div id="Setupmentorship" className="sm:pt-20 pt-12 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
           {/* first div */}
           <div className="flex flex-col gap-6">
@@ -878,20 +884,6 @@ const BestPracticesSection = () => {
         </div>
       </div>
       {/*end oF  6 seCTION */}
-
-      {/* footer  */}
-      {/* last footer */}
-      <div className="pt-16 pb-24 bg-[#3C4043] grid place-items-center">
-        <div className="grid place-items-center gap-y-3">
-          {/*  */}
-          <FaRegCheckCircle className="text-white text-[3.3rem]" />
-          <p className="text-white">
-            It looks like you've completed this lesson.
-          </p>
-        </div>
-      </div>
-      {/*end of last footer */}
-      {/*end of footer  */}
     </div>
   );
 };
