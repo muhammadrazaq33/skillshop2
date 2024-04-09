@@ -5,6 +5,7 @@ import { HiOutlineSpeakerphone } from "react-icons/hi";
 
 const MeetSection = () => {
   const [open, setOpen] = useState(false);
+  const [review, setReview] = useState(false);
 
   const toggle1 = (id) => {
     if (open === id) {
@@ -26,7 +27,10 @@ const MeetSection = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#startDrive" className="double_click_protection">
+                    <a
+                      href="#GlobalConnections"
+                      className="double_click_protection"
+                    >
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -37,7 +41,7 @@ const MeetSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#UploadMaterial"
+                      href="#ExpandClassroom"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -49,10 +53,7 @@ const MeetSection = () => {
                     </a>
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#OrganizeItems"
-                      className="double_click_protection"
-                    >
+                    <a href="#PlanEvent" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -63,7 +64,7 @@ const MeetSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#OrganizeItems"
+                      href="#ConnectLearning"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -75,10 +76,7 @@ const MeetSection = () => {
                     </a>{" "}
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#OrganizeItems"
-                      className="double_click_protection"
-                    >
+                    <a href="#GoogleEarth" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -101,7 +99,7 @@ const MeetSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Earth
                 </h1>
               </div>
@@ -111,7 +109,7 @@ const MeetSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Meet
                 </h1>
               </div>
@@ -156,7 +154,7 @@ const MeetSection = () => {
       {/* 2 seCTION */}
       {/* Make global connections
        */}
-      <div className="sm:pt-20 pt-12 sm:pb-16 pb-12">
+      <div id="GlobalConnections" className="sm:pt-20 pt-12 sm:pb-16 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
           <div className="flex flex-col gap-5">
             <h1 className="text1 leading-[2.4rem]">Make global connections</h1>
@@ -270,7 +268,10 @@ const MeetSection = () => {
       {/* 3 seCTION */}
       {/* Expand your classroom with Google Meet
        */}
-      <div className="sm:pt-32 pt-12 pb-10 top-shadow bg-[#FFFFFF]">
+      <div
+        id="ExpandClassroom"
+        className="sm:pt-32 pt-12 pb-10 top-shadow bg-[#FFFFFF]"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-0">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-5">
@@ -341,7 +342,10 @@ const MeetSection = () => {
       {/* 4 seCTION */}
       {/* Plan an event with Meet
        */}
-      <div className="sm:pt-32 pt-12 sm:pb-20 pb-12 shadow-top-bottom-inner bg-[#F9F9FA]">
+      <div
+        id="PlanEvent"
+        className="sm:pt-32 pt-12 sm:pb-20 pb-12 shadow-top-bottom-inner bg-[#F9F9FA]"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-0">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-5">
@@ -386,7 +390,7 @@ const MeetSection = () => {
       {/* 5 seCTION */}
       {/* Connect learning to location through Google Earth
        */}
-      <div className="sm:pt-20 pt-12 sm:pb-20 pb-12">
+      <div id="ConnectLearning" className="sm:pt-20 pt-12 sm:pb-20 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-5">
           <div className="flex flex-col gap-5">
             <h1 className="text1 leading-[2.4rem]">
@@ -562,6 +566,186 @@ const MeetSection = () => {
         </div>
       </div>
       {/*end oF  6 seCTION */}
+
+      {/* 5 seCTION */}
+      {/* How educators use Google Earth
+       */}
+      <div id="GoogleEarth" className="sm:pt-20 pt-12 sm:pb-16 pb-12">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
+          {/* first div */}
+          <div className="flex flex-col gap-6">
+            <h1 className="text1 leading-[2.4rem]">
+              How educators use Google Earth
+            </h1>
+          </div>
+          {/* second div */}
+          <div className="flex flex-col gap-7 mt-8">
+            <p className="Bold">
+              Click start to see more ideas from educators.
+            </p>
+            {/* cards ======> */}
+            <div
+              className={`grid md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-3 place-items-center ${
+                review ? "hidden" : "block"
+              }`}
+            >
+              <article
+                // data-aos="fade-up"
+                // data-aos-delay="50"
+                // data-aos-duration="1200"
+                className="grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4 max-w-[16rem] w-full"
+              >
+                <img src="./assets/meet20.png" className="w-12 h-12" alt="" />
+              </article>
+              <article
+                // data-aos="fade-up"
+                // data-aos-delay="50"
+                // data-aos-duration="1200"
+                className="max-w-[16rem] w-full grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4"
+              >
+                <img src="./assets/meet21.png" className="w-12 h-12" alt="" />
+              </article>
+              <article
+                // data-aos="fade-up"
+                // data-aos-delay="50"
+                // data-aos-duration="1200"
+                className="max-w-[16rem] w-full grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4"
+              >
+                <img
+                  src="./assets/portfolio12.png"
+                  className="w-12 h-12"
+                  alt=""
+                />
+              </article>
+              <article
+                // data-aos="fade-up"
+                // data-aos-delay="50"
+                // data-aos-duration="1200"
+                className="max-w-[16rem] w-full grid place-items-center pt-6 pb-10 bg-[#DADCE0] rounded-lg gap-y-5 px-4"
+              >
+                <img
+                  src="./assets/portfolio13.png"
+                  className="w-12 h-12"
+                  alt=""
+                />
+              </article>
+            </div>
+            {/* button */}
+            <button
+              onClick={() => setReview(true)}
+              className={`bg-[#4285F4] text-white m-auto py-3 px-4 font-bold mt-1 ${
+                review ? "hidden" : "block"
+              }`}
+            >
+              Start
+            </button>
+          </div>
+          {/* usestate */}
+          {/* third div */}
+          <div className={`flex flex-col gap-1 ${review ? "block" : "hidden"}`}>
+            {/* first card */}
+            <div
+              data-aos="fade-left"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              className={`grid place-content-start max-w-[50rem] w-full`}
+            >
+              <article className="bg-[#DADCE0] flex justify-around  items-center rounded-lg sm:gap-x-10 gap-x-6 sm:pl-20 px-8 py-4 sm:py-6">
+                <img src="./assets/meet20.png" className="w-12 h-12" alt="" />
+                <p className="paragraph">
+                  "In History class, we use Google Earth to track the routes of
+                  explorers. We placemark important locations, draw the routes,
+                  and we turn off the 3D buildings layer to see how the
+                  landscape might have looked to the explorers."
+                </p>
+              </article>
+            </div>
+            {/* second card */}
+            <div
+              data-aos="fade-right"
+              data-aos-delay="60"
+              data-aos-duration="1200"
+              className={`grid place-content-end w-full`}
+            >
+              <article className="bg-[#DADCE0] flex sm:gap-x-10 gap-x-6 px-8 py-4 sm:py-6 items-center sm:pr-20 rounded-lg justify-between max-w-[50rem]">
+                <p className="paragraph">
+                  "In Science, we use Google Earth to mark the locations of
+                  earthquakes and volcanoes. Photos, islands, and geographic
+                  features in satellite imagery help us to collect information
+                  and learn about plate tectonics."
+                </p>
+                <img src="./assets/meet21.png" className="w-12 h-12" alt="" />
+              </article>
+            </div>
+            {/* third card */}
+            <div
+              data-aos="fade-left"
+              data-aos-delay="60"
+              data-aos-duration="1300"
+              className={`grid place-content-start w-full`}
+            >
+              <article className="bg-[#DADCE0] flex justify-around items-center sm:gap-x-10 gap-x-6 sm:pl-20 px-8 py-4 sm:py-6 rounded-lg max-w-[50rem]">
+                <img
+                  src="./assets/portfolio12.png"
+                  className="w-12 h-12"
+                  alt=""
+                />
+                <p className="paragraph">
+                  "My students really enjoy using Google Earth to research
+                  animal habitats. After students classify animals by habitat,
+                  they use Google Earth to locate the specific habitat and
+                  placemark it, and add pictures and information detailing how
+                  the habitat is unique."
+                </p>
+              </article>
+            </div>
+            {/* fourth card */}
+            <div
+              data-aos="fade-right"
+              data-aos-delay="60"
+              data-aos-duration="1200"
+              className={`grid place-content-end w-full`}
+            >
+              <article className="bg-[#DADCE0] flex sm:gap-x-10 gap-x-6 px-8 py-4 sm:py-6 items-center sm:pr-20 rounded-lg justify-between max-w-[50rem]">
+                <p className="paragraph">
+                  "Google Earth is a powerful tool that helps students
+                  understand how to estimate distances. My students use the
+                  ruler and path tools to measure how far familiar places are
+                  from their homes."
+                </p>
+                <img
+                  src="./assets/portfolio13.png"
+                  className="w-12 h-12"
+                  alt=""
+                />
+              </article>
+            </div>
+            {/* fifth card */}
+            <div
+              data-aos="fade-left"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              className={`grid place-content-start max-w-[50rem] w-full`}
+            >
+              <article className="bg-[#DADCE0] flex justify-around  items-center rounded-lg sm:gap-x-10 gap-x-6 sm:pl-20 px-8 py-4 sm:py-6">
+                <img src="./assets/meet20.png" className="w-12 h-12" alt="" />
+                <p className="paragraph">
+                  "I use Google Earth with my students to learn about
+                  sustainable development goals and apply them to project-based
+                  learning. We look at what is happening in our community and
+                  brainstorm on how we can make it healthier and more
+                  sustainable. The students then map out where they would like
+                  to see more green spaces, bike paths, protected watersheds …
+                  they come up with a plan for their future!"
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*end oF  4 seCTION */}
+
+      <div className="bg-[url('/assets/meet22.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
       {/* 7 sEctIOn */}
       {/* Reflect on what you have learned */}
