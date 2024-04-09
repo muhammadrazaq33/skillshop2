@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import SingleStep from "../Components/SingleStep";
 import Model1 from "../Components/Model1";
+import { Collapse } from "react-collapse";
+import { FaMinus } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
 
 const citizens = [
   {
@@ -52,7 +54,10 @@ const ShareOptionSection = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#startDrive" className="double_click_protection">
+                    <a
+                      href="#ExploreDigitalTools"
+                      className="double_click_protection"
+                    >
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -62,10 +67,7 @@ const ShareOptionSection = () => {
                     </a>{" "}
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#UploadMaterial"
-                      className="double_click_protection"
-                    >
+                    <a href="#ExploreIdea" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -88,7 +90,7 @@ const ShareOptionSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Sites
                 </h1>
               </div>
@@ -98,7 +100,7 @@ const ShareOptionSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Docs
                 </h1>
               </div>
@@ -108,7 +110,7 @@ const ShareOptionSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Forms
                 </h1>
               </div>
@@ -118,7 +120,7 @@ const ShareOptionSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Blogger
                 </h1>
               </div>
@@ -162,9 +164,175 @@ const ShareOptionSection = () => {
       </div>
       {/*end of first section */}
 
+      {/* 2 section */}
+      {/* Explore how digital tools personalize learning */}
+      <div id="ExploreDigitalTools" className="sm:pt-20 pt-12 sm:pb-20 pb-12">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
+          <div className="flex flex-col gap-6">
+            <h1 className="text1 leading-[2.4rem]">
+              Explore how digital tools personalize learning
+            </h1>
+            <p className="paragraph">
+              You can help make learning more personal and engaging for your
+              students by implementing digital tools in your classroom. The
+              ideas below are just a few of the many ways you can use Google
+              tools to reach your students through personalized learning.
+            </p>
+          </div>
+          {/* Accordian div */}
+          <div className="flex flex-col justify-end gap-4 mt-10">
+            <p className="Bold">Click below to expand each item.</p>
+            {/* Accordian */}
+            <div>
+              {/* first */}
+              <div className="flex flex-col gap-1">
+                <article
+                  onClick={() => toggle1(1)}
+                  className={`flex items-center gap-6 px-6 py-5 rounded-md cursor-pointer bg-[#dadce0] hover:bg-[#1A73E8] duration-700 hover:text-white ${
+                    open === true && "active2"
+                  }`}
+                >
+                  <button>{open === 1 ? <FaMinus /> : <FaPlus />}</button>
+                  <p className="text-[18px] ">
+                    Showcase student work with Google Sites
+                  </p>
+                </article>
+                <Collapse isOpened={open === 1}>
+                  <article className="px-6 py-4 flex flex-col gap-4">
+                    <p className="paragraph">
+                      You can highlight student work for parents and guardians,
+                      administrators, and the students themselves using Google
+                      Sites. You or your students can{" "}
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://support.google.com/sites/answer/98081?hl=en&amp;ref_topic=7184580"
+                        className="text-[blue] underline"
+                      >
+                        create a website
+                      </a>{" "}
+                      using Google Sites where students can showcase their
+                      inquiry process and present their findings.&nbsp;
+                    </p>
+                  </article>
+                </Collapse>
+              </div>
+              {/* second  */}
+              <div className="flex flex-col gap-1">
+                <article
+                  onClick={() => toggle1(2)}
+                  className={`flex items-center gap-6 px-6 py-5 rounded-md cursor-pointer bg-[#dadce0] hover:bg-[#1A73E8] duration-700 hover:text-white ${
+                    open === true && "active2"
+                  }`}
+                >
+                  <button>{open === 2 ? <FaMinus /> : <FaPlus />}</button>
+                  <p className="text-[18px] ">
+                    Create multimedia text sets with Google Docs
+                  </p>
+                </article>
+                <Collapse isOpened={open === 2}>
+                  <article className="px-6 py-4 grid md:grid-cols-2 grid-cols-1 gap-4">
+                    <div className="flex flex-col gap-5">
+                      <p className="paragraph">
+                        A multimedia text set is a short document with several{" "}
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://support.google.com/docs/answer/45893?hl=en&amp;co=GENIE.Platform%3DDesktop"
+                          className="text-[blue] underline"
+                        >
+                          hyperlinks added
+                        </a>{" "}
+                        to help learners access online resources about a
+                        specific topic. You can use a multimedia text set to
+                        provide students with choices about how they would like
+                        to explore content.&nbsp;
+                      </p>
+                      <p className="paragraph">
+                        In a multimedia text set, you might include links to
+                        videos, online readings, and interactive simulations
+                        that allow your students to explore the same content in
+                        different ways. This makes a multimedia text set a
+                        useful tool in a flipped classroom or as an introductory
+                        activity in a blended class environment.{" "}
+                      </p>
+                      <p className="paragraph">
+                        Here’s an example of how a multimedia text set could
+                        provide a link to a video about avalanches:
+                      </p>
+                    </div>
+                    <div>
+                      <img src="./assets/share20.png" alt="" />
+                    </div>
+                  </article>
+                </Collapse>
+              </div>
+              {/* third */}
+              <div className="flex flex-col gap-1">
+                <article
+                  onClick={() => toggle1(3)}
+                  className={`flex items-center gap-6 px-6 py-5 rounded-md cursor-pointer bg-[#dadce0] hover:bg-[#1A73E8] duration-700 hover:text-white ${
+                    open === true && "active2"
+                  }`}
+                >
+                  <button>{open === 3 ? <FaMinus /> : <FaPlus />}</button>
+                  <p className="text-[18px] ">
+                    Prompt students using Google Forms
+                  </p>
+                </article>
+                <Collapse isOpened={open === 3}>
+                  <article className="px-6 py-4 grid md:grid-cols-2 grid-cols-1 gap-4">
+                    <div className="flex flex-col gap-5">
+                      <p className="paragraph">
+                        Using visual content is a popular and effective way to
+                        add motivation and inspiration to personalized learning
+                        environments. You can{" "}
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://support.google.com/docs/answer/2839737?hl=en#zippy=%2Cadd-image-or-video"
+                          className="text-[blue] underline"
+                        >
+                          embed an image or video
+                        </a>{" "}
+                        in a form in Google Forms and then ask students
+                        questions about the content, as a project or an
+                        assessment.
+                      </p>
+                      <p className="paragraph">
+                        You can also select{" "}
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://applieddigitalskills.withgoogle.com/c/middle-and-high-school/en/create-quizzes-in-google-forms/create-quizzes-in-google-forms/extensions/add-images-to-your-quiz-questions.html"
+                          className="text-[blue] underline"
+                        >
+                          this link
+                        </a>{" "}
+                        to watch a short video to learn how to add an image to a
+                        form.&nbsp;
+                      </p>
+                    </div>
+                    <div>
+                      <img src="./assets/share21.png" alt="" />
+                    </div>
+                  </article>
+                </Collapse>
+              </div>
+            </div>
+            {/*end of Accordian */}
+          </div>
+          {/*end of Accordian div */}
+        </div>
+      </div>
+      {/*end of 2 section */}
+
       {/* third section */}
       {/* Explore ideas from other educators */}
-      <div className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA] top-shadow">
+      <div
+        id="ExploreIdea"
+        className="sm:pt-20 pt-12 sm:pb-16 pb-12 bg-[#F9F9FA] top-shadow"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto">
           <div className="flex flex-col gap-5">
             <h1 className="text1">Explore ideas from other educators</h1>

@@ -5,8 +5,8 @@ import { FaPlus } from "react-icons/fa6";
 import { FaRegCheckCircle } from "react-icons/fa";
 
 const GoogleSlidesSection = () => {
-  const [open, setOpen] = useState(false);
   const [review, setReview] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const toggle1 = (id) => {
     if (open === id) {
