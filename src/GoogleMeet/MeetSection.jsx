@@ -563,8 +563,6 @@ const MeetSection = () => {
       </div>
       {/*end oF  6 seCTION */}
 
-      <div className="bg-[url('/assets/meet11.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
-
       {/* 7 sEctIOn */}
       {/* Reflect on what you have learned */}
       <div className="sm:pt-20 pt-16 pb-12">
