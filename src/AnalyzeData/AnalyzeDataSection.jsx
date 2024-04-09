@@ -17,7 +17,10 @@ const AnalyzeDataSection = () => {
               <div className="pl-4">
                 <ul className="activitysection__list courselist">
                   <li className="activitysection__item courselist__item">
-                    <a href="#startDrive" className="double_click_protection">
+                    <a
+                      href="#UseAdvanceTools"
+                      className="double_click_protection"
+                    >
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -27,10 +30,7 @@ const AnalyzeDataSection = () => {
                     </a>{" "}
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#UploadMaterial"
-                      className="double_click_protection"
-                    >
+                    <a href="#SortData" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -40,10 +40,7 @@ const AnalyzeDataSection = () => {
                     </a>
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#UploadMaterial"
-                      className="double_click_protection"
-                    >
+                    <a href="#ApplyFilter" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -53,10 +50,7 @@ const AnalyzeDataSection = () => {
                     </a>
                   </li>
                   <li className="activitysection__item courselist__item">
-                    <a
-                      href="#UploadMaterial"
-                      className="double_click_protection"
-                    >
+                    <a href="#PivotTable" className="double_click_protection">
                       <div className="courselist__marker1"></div>
                       <div className="courselist__itemcontent">
                         <h3 className="sm:text-[22px] text-[11.8px] activitysection__itemname section_links">
@@ -67,7 +61,7 @@ const AnalyzeDataSection = () => {
                   </li>
                   <li className="activitysection__item courselist__item">
                     <a
-                      href="#UploadMaterial"
+                      href="#COUNTIFfunction"
                       className="double_click_protection"
                     >
                       <div className="courselist__marker1"></div>
@@ -105,7 +99,7 @@ const AnalyzeDataSection = () => {
                   className="w-[3.2rem] h-[3.2rem]"
                   alt=""
                 />
-                <h1 className="text-[20px] max-w-[12rem] leading-[1.6rem]">
+                <h1 className="tools max-w-[12rem] leading-[1.6rem]">
                   Google Sheets
                 </h1>
               </div>
@@ -149,7 +143,7 @@ const AnalyzeDataSection = () => {
       {/* 2 seCTION */}
       {/* Use advanced tools for data analysis
        */}
-      <div className="sm:pt-20 pt-12 pb-12">
+      <div id="UseAdvanceTools" className="sm:pt-20 pt-12 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">
@@ -178,7 +172,10 @@ const AnalyzeDataSection = () => {
       {/* 3 seCTION */}
       {/* Sort your data
        */}
-      <div className="sm:pt-20 pt-12 md:pb-16 pb-12 bg-[#F9F9FA] top-shadow">
+      <div
+        id="SortData"
+        className="sm:pt-20 pt-12 md:pb-16 pb-12 bg-[#F9F9FA] top-shadow"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-3">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">Sort your data</h1>
@@ -316,7 +313,10 @@ const AnalyzeDataSection = () => {
       {/* 5 seCTION */}
       {/* Apply filters
        */}
-      <div className="sm:pt-20 pt-12 md:pb-20 pb-16 bg-[#F9F9FA] shadow-top-bottom-inner">
+      <div
+        id="ApplyFilter"
+        className="sm:pt-20 pt-12 md:pb-20 pb-16 bg-[#F9F9FA] shadow-top-bottom-inner"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">Apply filters</h1>
@@ -393,7 +393,7 @@ const AnalyzeDataSection = () => {
       {/* 6 seCTION */}
       {/* Create a pivot table
        */}
-      <div className="sm:pt-20 pt-12 pb-12">
+      <div id="PivotTable" className="sm:pt-20 pt-12 pb-12">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">Create a pivot table</h1>
@@ -432,7 +432,10 @@ const AnalyzeDataSection = () => {
       {/* 7 seCTION */}
       {/* Useful functions
        */}
-      <div className="sm:pt-20 pt-12 md:pb-16 pb-12 bg-[#F9F9FA] top-shadow">
+      <div
+        id="COUNTIFfunction"
+        className="sm:pt-20 pt-12 md:pb-16 pb-12 bg-[#F9F9FA] top-shadow"
+      >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
           <div className="flex flex-col gap-6">
             <h1 className="text1 leading-[2.4rem]">Useful functions</h1>
