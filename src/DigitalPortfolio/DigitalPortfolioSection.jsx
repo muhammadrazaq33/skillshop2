@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Model from "../Components/Model";
 import { FaRegCheckCircle } from "react-icons/fa";
+import GenericCarousel from "../Components/GenericCarousel";
 
 const citizens = [
   {
@@ -25,6 +26,17 @@ const citizens = [
   },
 ];
 
+const images = [
+  { image: "/assets/portfolio_slider_img1.png", alt: "Image 1" },
+  { image: "/assets/portfolio_slider_img2.png", alt: "Image 2" },
+  { image: "/assets/portfolio_slider_img3.png", alt: "Image 2" },
+];
+const images1 = [
+  { image: "/assets/portfolio_slider_img4.png", alt: "Image 1" },
+  { image: "/assets/portfolio_slider_img5.png", alt: "Image 2" },
+  { image: "/assets/portfolio_slider_img6.png", alt: "Image 2" },
+  { image: "/assets/portfolio_slider_img7.png", alt: "Image 2" },
+];
 const DigitalPortfolioSection = () => {
   const [showModel, setShowModel] = useState(false);
   const [review, setReview] = useState(false);
@@ -312,16 +324,179 @@ const DigitalPortfolioSection = () => {
       <div className="bg-[url('/assets/portfolio9.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
       {/* slider */}
-      <div className="grid place-content-center h-[25rem] bg-[#F9F9FA]">
-        <h1 className="text-[4rem]">Slider</h1>
+      <div className="sm:pt-20 pt-12 pb-10 bg-[#F9F9FA]">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col sm:gap-10 gap-8">
+          <div className="flex flex-col gap-6">
+            <h1 className="text">Try it out </h1>
+            <p className="paragraph">
+              Try the different methods you can use to house digital work with
+              Google tools.
+            </p>
+            <div>
+              <p className="font-semibold">Using Google drive</p>
+              <p className="paragraph">
+                One of the easiest ways to host student work is using Google
+                Drive.
+              </p>
+            </div>
+          </div>
+          {/* slider div */}
+          <div className="flex flex-col gap-8">
+            <p className="text-[16px] font-bold">
+              Click the arrow to learn more.
+            </p>
+            {/* slider */}
+            <GenericCarousel
+              images={images}
+              slides={[
+                <div key={1}>
+                  <p className="paragraph mb-2">
+                    Create a<strong> New folder</strong> for each student (or
+                    have students create them) and{" "}
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://support.google.com/drive/answer/2494822?hl=en"
+                      className="text-[blue] underline"
+                    >
+                      share it between each other
+                    </a>
+                    .
+                  </p>
+                </div>,
+                <div key={2}>
+                  <p className="paragraph mb-2">
+                    Consider using a naming convention so you can easily
+                    identify student folders, such as “First+Last
+                    Name+Portfolio.”
+                  </p>
+                </div>,
+                <div key={3}>
+                  <div>
+                    <p className="paragraph mb-2">
+                      Have students save their portfolio work in that folder,
+                      whether they are using computers, tablets, or other mobile
+                      devices.
+                    </p>
+                  </div>
+                </div>,
+              ]}
+            />
+          </div>
+        </div>
       </div>
       {/*end of slider */}
 
       <div className="bg-[url('/assets/portfolio10.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
       {/* slider */}
-      <div className="grid place-content-center h-[25rem]">
-        <h1 className="text-[4rem]">Slider</h1>
+      <div className="sm:pt-20 pt-12 pb-10">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col sm:gap-10 gap-8">
+          <div className="flex flex-col gap-6">
+            <h1 className="text">Try it out </h1>
+            <div>
+              <p className="font-semibold">Using Sites</p>
+              <p className="paragraph">
+                A Google Site is made up of pages. You can help students create
+                and organize pages to be a portfolio of work that can follow
+                them through their academic career.
+              </p>
+            </div>
+            <p className="paragraph">
+              After having students create their site, have them{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://support.google.com/sites/answer/6372887"
+                className="text-[blue] underline"
+              >
+                share the site
+              </a>{" "}
+              with a collaborator. When students feel their work is ready for a
+              larger audience, have them{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://support.google.com/sites/answer/6372880"
+                className="text-[blue] underline"
+              >
+                publish the site
+              </a>
+              .
+            </p>
+          </div>
+          {/* slider div */}
+          <div className="flex flex-col gap-8">
+            <p className="text-[16px] font-bold">
+              Click the arrow to learn more.
+            </p>
+            {/* slider */}
+            <GenericCarousel
+              images={images1}
+              slides={[
+                <div key={1}>
+                  <p className="paragraph">Best practice tip:</p>
+                  <p className="paragraph">
+                    Organize your site as you go by making a deliberate decision
+                    about the location for each new page you create.{" "}
+                  </p>
+                  <p className="paragraph">
+                    Two folders have been created here underneath Syllabus:
+                    Exams and Project.
+                  </p>
+                  <p className="paragraph mb-2">
+                    You can read more about{" "}
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://support.google.com/sites/answer/6372864"
+                      className="hover:underline"
+                    >
+                      page locations here
+                    </a>
+                    .
+                  </p>
+                </div>,
+                <div key={2}>
+                  <p className="paragraph">
+                    If you find yourself designing a similar layout of a page
+                    over and over, make it a <strong>template</strong>.{" "}
+                  </p>
+                  <p className="paragraph">
+                    For example, perhaps you create a new student showcase page
+                    each week to share a piece of student work.
+                  </p>
+                  <p className="paragraph mb-2">
+                    To do this you will need to use the{" "}
+                    <strong>Duplicate page</strong> function by clicking on the
+                    three dots beside the page you want to duplicate.
+                  </p>
+                </div>,
+                <div key={3}>
+                  <p className="paragraph">
+                    Customize your Google Site to make it represent your
+                    classroom.
+                  </p>
+                  <p className="paragraph">
+                    For example, creating a class header, customizing the colors
+                    and fonts with a theme, or modifying the layout and
+                    navigation bar.
+                  </p>
+                  <p className="paragraph mb-2">
+                    To do this, click on <strong>Themes</strong>.
+                  </p>
+                </div>,
+                <div key={4}>
+                  <p className="paragraph mb-2">
+                    Click on <strong>Insert</strong> and add various forms of
+                    media to your Google Site such as Docs, Calendars, Google
+                    Maps, YouTube videos, Google Forms.
+                  </p>
+                </div>,
+              ]}
+            />
+          </div>
+        </div>
       </div>
       {/*end of slider */}
 
@@ -537,18 +712,6 @@ const DigitalPortfolioSection = () => {
         </div>
       </div>
       {/*END oF 6 sEctIOn */}
-
-      {/* last footer */}
-      <div className="pt-16 pb-24 bg-[#3C4043] grid place-items-center">
-        <div className="grid place-items-center gap-y-3">
-          {/*  */}
-          <FaRegCheckCircle className="text-white text-[3.3rem]" />
-          <p className="text-white">
-            It looks like you've completed this lesson.
-          </p>
-        </div>
-      </div>
-      {/*end of last footer */}
     </div>
   );
 };

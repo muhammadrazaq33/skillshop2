@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { AiOutlineWarning } from "react-icons/ai";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
+import GenericCarousel from "../Components/GenericCarousel";
 
+const images = [
+  { image: "/assets/info_slider_img1.png", alt: "Image 1" },
+  { image: "/assets/info_slider_img2.png", alt: "Image 2" },
+  { image: "/assets/info_slider_img3.png", alt: "Image 2" },
+  { image: "/assets/info_slider_img4.png", alt: "Image 2" },
+  { image: "/assets/info_slider_img5.png", alt: "Image 2" },
+];
 const ConfirmationMessage = () => {
   const [openModel, setOpenModel] = useState(null);
 
@@ -201,15 +209,67 @@ const ConfirmationMessage = () => {
         className="bg-[#F9F9FA] sm:pt-20 pt-16 sm:pb-16 pb-12"
       >
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-6">
-          <h1 className="text">Try it out</h1>
-          <p className="paragraph">Create a spreadsheet with guardian data.</p>
+          <div className="flex flex-col gap-6">
+            <h1 className="text">Try it out</h1>
+            <p className="paragraph">
+              Create a spreadsheet with guardian data.
+            </p>
+          </div>
 
           {/* slider */}
-          <div className="mt-6">
+          <div className="mt-6 flex flex-col gap-8">
             <p className="Bold">Click the arrow to learn more.</p>
-            <div className="grid place-items-center h-[20vh]">
-              <h1 className="text-[3rem]">Slider</h1>
-            </div>
+            <GenericCarousel
+              images={images}
+              slides={[
+                <div key={1}>
+                  <ol className="list-decimal pl-12 paragraph">
+                    <li>
+                      Click <strong>Responses</strong> at the top of your form.
+                    </li>
+                    <li>
+                      Click <strong>Link to Sheets</strong>.
+                    </li>
+                  </ol>
+                </div>,
+                <div key={2}>
+                  <p className="paragraph mb-2">
+                    3. Choose whether to create a new sheet or to add to an
+                    existing sheet. We’re going to create a new sheet in our
+                    example.
+                  </p>
+                </div>,
+                <div key={3}>
+                  <div>
+                    <p className="paragraph mb-2">
+                      4. Then select <strong>Create a filter</strong>. Now each
+                      column in your sheet can be filtered by:{" "}
+                      <strong>color, condition</strong>, or{" "}
+                      <strong>values</strong>.
+                    </p>
+                  </div>
+                </div>,
+                <div key={4}>
+                  <p className="paragraph mb-2">
+                    5. Click the <strong>filter</strong> icon at the top of the
+                    column you’d like to filter by. For preferred communication
+                    channels, you can select to filter by:{" "}
+                    <strong>email, phone, text, </strong>
+                    or <strong>mail</strong>. Note that selections not chosen by
+                    guardians will not show up e.g. if nobody has selected text,
+                    this will not show as a filter option yet.
+                  </p>
+                </div>,
+                <div key={5}>
+                  <p className="paragraph mb-0">
+                    6. To remove the filter, click <strong>Data</strong>.
+                  </p>
+                  <p className="paragraph mb-2">
+                    7. Then select <strong>Remove filter</strong>.
+                  </p>
+                </div>,
+              ]}
+            />
           </div>
           {/*end of slider */}
 

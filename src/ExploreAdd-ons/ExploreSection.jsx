@@ -1,10 +1,23 @@
 import React, { useState } from "react";
 import { SlBadge } from "react-icons/sl";
+import GenericCarousel from "../Components/GenericCarousel";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
 
+const images = [
+  { image: "/assets/exlpore_slider_img1.png", alt: "Image 1" },
+  { image: "/assets/exlpore_slider_img2.png", alt: "Image 2" },
+  { image: "/assets/exlpore_slider_img3.png", alt: "Image 2" },
+];
 const ExploreSection = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   const [activeIndex, setActiveIndex] = useState(0); // State to track active paragraph index
 
   const handleClick = (index) => {
@@ -411,8 +424,52 @@ const ExploreSection = () => {
       <div className="bg-[url('/assets/explore9.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
       {/* slider */}
-      <div className="h-[50vh] grid place-items-center bg-[#F9F9FA]">
-        <h1 className="text-[3rem]">Slider</h1>
+      <div className="sm:pt-20 pt-12 pb-10 bg-[#F9F9FA]">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col sm:gap-10 gap-8">
+          <div className="flex flex-col gap-6">
+            <h1 className="text">Take it to work: Try add-ons for yourself</h1>
+            <p className="paragraph">
+              In Google Forms, open a form you have already created or create a
+              new one. Take a few minutes and consider which additional
+              functions you would like to have in Google Forms. Then search for
+              and install an add-on that could help you. Consider add-ons like
+              formLimiter, Timer for Google Forms, or Form Builder as potential
+              options. Remember, if an add-on doesn’t meet your needs, you can
+              always remove it later.
+            </p>
+          </div>
+          {/* slider div */}
+          <div className="flex flex-col gap-8">
+            <p className="text-[16px] font-bold">
+              Click the arrow to learn more.
+            </p>
+            {/* slider */}
+            <GenericCarousel
+              images={images}
+              slides={[
+                <div key={1}>
+                  <p className="paragraph mb-2">
+                    Check out the example Google Form.
+                  </p>
+                </div>,
+                <div key={2}>
+                  <p className="paragraph mb-2">
+                    To get started with add-ons, open your Google Form and open
+                    the <strong>Add-ons</strong> menu.
+                  </p>
+                </div>,
+                <div key={3}>
+                  <div>
+                    <p className="paragraph mb-2">
+                      Then, search for Google Form add-ons that specifically fit
+                      your needs.
+                    </p>
+                  </div>
+                </div>,
+              ]}
+            />
+          </div>
+        </div>
       </div>
       {/* end of slider */}
     </div>
